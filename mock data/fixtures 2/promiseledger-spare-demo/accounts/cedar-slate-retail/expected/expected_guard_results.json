@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_cedar_slate_retail",
+  "guardCases": [
+    {
+      "draftId": "draft_cedar_slate_retail_safe_followup",
+      "expectedDecision": "allow",
+      "risk": "low",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_cedar_slate_retail_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "Real-time payment reconciliation and payment token handling are included before launch.",
+          "reason": "Real-time reconciliation is planned, not generally available, and token handling is excluded by SOW and product scope.",
+          "conflictingSourceIds": [
+            "src_cedar_slate_retail_product_scope_2026_05_20",
+            "src_cedar_slate_retail_integration_support_matrix_2026_05_21",
+            "src_cedar_slate_retail_sow_2026_05_26"
+          ],
+          "safeAlternative": "We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product review."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "We can also commit to event-triggered inventory updates before June 10.",
+          "reason": "Event-triggered inventory updates are excluded from committed launch deliverables.",
+          "conflictingSourceIds": [
+            "src_cedar_slate_retail_product_scope_2026_05_20",
+            "src_cedar_slate_retail_proposal_2026_05_20"
+          ],
+          "safeAlternative": "Daily batch inventory sync is included; event-triggered updates require product review."
+        }
+      ]
+    }
+  ]
+}

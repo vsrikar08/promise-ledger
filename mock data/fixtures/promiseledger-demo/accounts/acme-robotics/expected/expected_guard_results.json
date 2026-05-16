@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_acme_robotics",
+  "guardCases": [
+    {
+      "draftId": "draft_acme_robotics_safe_followup",
+      "expectedDecision": "allow",
+      "risk": "low",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_acme_robotics_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "NetSuite is definitely supported for the pilot.",
+          "reason": "Product scope and support matrix say NetSuite is not approved for pilot commitments.",
+          "conflictingSourceIds": [
+            "src_acme_robotics_product_scope_2026_05_16",
+            "src_acme_robotics_integration_support_matrix_2026_05_16",
+            "src_acme_robotics_slack_2026_05_16_product_review_thread"
+          ],
+          "safeAlternative": "We’ll confirm the NetSuite integration scope with product before adding it to the pilot plan."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "We will also deliver a production renewal dashboard before your June 12 QBR.",
+          "reason": "Only a dashboard preview plan is source-backed and no owner is assigned.",
+          "conflictingSourceIds": [
+            "src_acme_robotics_product_scope_2026_05_16",
+            "src_acme_robotics_slack_2026_05_16_internal_handoff"
+          ],
+          "safeAlternative": "We will share a renewal dashboard preview plan after reviewing the field map."
+        },
+        {
+          "claimId": "claim_003",
+          "text": "We can enable live external emails during the pilot.",
+          "reason": "Product scope and SOW require preview-only external email mode.",
+          "conflictingSourceIds": [
+            "src_acme_robotics_product_scope_2026_05_16",
+            "src_acme_robotics_sow_2026_05_20"
+          ],
+          "safeAlternative": "We can support preview-only email workflows during the pilot."
+        }
+      ]
+    }
+  ]
+}

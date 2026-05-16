@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_cedar_slate_retail",
+  "contradictions": [
+    {
+      "contradictionId": "contra_cedar_slate_retail_realtime_payment_scope",
+      "accountId": "acct_cedar_slate_retail",
+      "severity": "critical",
+      "category": "payment_scope_mismatch",
+      "summary": "The call suggested real-time reconciliation could work before launch, while the proposal excludes real-time payment reconciliation from pilot scope.",
+      "claimA": {
+        "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "text": "We can likely get real-time reconciliation working before launch.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_cedar_slate_retail_proposal_2026_05_20",
+        "text": "Real-time payment reconciliation is not included in pilot scope.",
+        "reliability": "high"
+      },
+      "recommendedResolution": "Clarify that daily batch reconciliation is committed and real-time reconciliation remains Product review."
+    },
+    {
+      "contradictionId": "contra_cedar_slate_retail_token_handling",
+      "accountId": "acct_cedar_slate_retail",
+      "severity": "high",
+      "category": "payment_scope_mismatch",
+      "summary": "Customer expects payment token handling in the launch plan, while the signed SOW says the vendor will not receive or process payment tokens.",
+      "claimA": {
+        "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "text": "Payment token handling has to be inside the launch plan, otherwise finance will keep a manual exception queue.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_cedar_slate_retail_sow_2026_05_26",
+        "text": "Vendor will not receive or process payment tokens.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Use the SOW exclusion and Product scope safe wording in all customer-facing drafts."
+    },
+    {
+      "contradictionId": "contra_cedar_slate_retail_support_sla_mapping",
+      "accountId": "acct_cedar_slate_retail",
+      "severity": "medium",
+      "category": "support_sla_mismatch",
+      "summary": "Support promised a connector mapping update by May 23, while the SOW states support does not create a same-day connector-change SLA.",
+      "claimA": {
+        "sourceId": "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+        "text": "Support will publish a connector mapping update by May 23 and escalate unmapped SKU families to Product Integrations.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_cedar_slate_retail_sow_2026_05_26",
+        "text": "Configuration support is best-effort and does not create a same-day connector-change SLA.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Track the mapping update as a support commitment but avoid representing it as an SLA."
+    }
+  ]
+}

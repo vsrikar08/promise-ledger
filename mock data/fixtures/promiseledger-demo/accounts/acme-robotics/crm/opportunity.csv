@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_acme_robotics_ai_workflow_pilot,acct_acme_robotics,AI Workflow Pilot,pilot,72000,2026-06-14,person_acme_robotics_alex_rivera,new_business,AI renewal workflow pilot,Northwind Automations,Confirm NetSuite scope and send security packet,best_case

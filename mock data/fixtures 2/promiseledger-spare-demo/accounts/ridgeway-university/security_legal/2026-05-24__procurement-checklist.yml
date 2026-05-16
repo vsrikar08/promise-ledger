@@ -1,0 +1,32 @@
+schemaVersion: '0.1'
+sourceId: src_ridgeway_university_procurement_checklist_2026_05_24
+sourceType: procurement_checklist
+accountId: acct_ridgeway_university
+createdAt: '2026-05-24T12:00:00-07:00'
+visibility: customer_facing
+reliability: high
+items:
+- itemId: proc_ridgeway_security_questionnaire
+  requestedByPersonId: person_ridgeway_university_lena_ortega
+  ownerSide: internal
+  ownerPersonId: person_ridgeway_university_camille_yu
+  title: Security questionnaire and DPA approval packet
+  dueDate: '2026-05-29'
+  status: open
+  evidenceRequired: true
+- itemId: proc_ridgeway_dpa_approval_checkpoint
+  requestedByPersonId: person_ridgeway_university_lena_ortega
+  ownerSide: internal
+  ownerPersonId: person_ridgeway_university_camille_yu
+  title: DPA approval checkpoint
+  dueDate: '2026-06-04'
+  status: open
+  evidenceRequired: true
+- itemId: proc_ridgeway_sso_metadata_packet
+  requestedByPersonId: person_ridgeway_university_marcus_lee
+  ownerSide: customer
+  ownerPersonId: person_ridgeway_university_marcus_lee
+  title: SSO metadata packet
+  dueDate: '2026-05-28'
+  status: open
+  evidenceRequired: true

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_northstar_health",
+  "contradictions": [
+    {
+      "contradictionId": "contra_northstar_health_onboarding_timeline",
+      "accountId": "acct_northstar_health",
+      "severity": "critical",
+      "category": "timeline_mismatch",
+      "summary": "Sales call suggested onboarding can start in 7 days, but the SOW requires kickoff within 15 business days after security approval, signed BAA, and PO.",
+      "claimA": {
+        "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+        "text": "If procurement moves, onboarding can start in 7 days.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_northstar_health_sow_2026_05_22",
+        "text": "Kickoff occurs within 15 business days after security approval, signed BAA, and procurement PO are complete.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Use SOW language in customer-facing follow-up and clarify that the 7-day statement was conditional, not a committed kickoff date."
+    },
+    {
+      "contradictionId": "contra_northstar_health_security_packet_scope",
+      "accountId": "acct_northstar_health",
+      "severity": "high",
+      "category": "legal_mismatch",
+      "summary": "Customer expects a security packet by Friday, but penetration test attestation is not available until June 3.",
+      "claimA": {
+        "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+        "text": "The security packet must include SOC 2, encryption overview, subprocessors, and audit log description by Friday.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_northstar_health_security_review_2026_05_19",
+        "text": "Penetration test attestation is not available until June 3.",
+        "reliability": "high"
+      },
+      "recommendedResolution": "Send approved materials immediately and explicitly state that penetration test attestation follows on June 3."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+schemaVersion: "0.1"
+sourceId: "src_northstar_health_product_scope_2026_05_18"
+sourceType: "product_scope"
+accountId: "acct_northstar_health"
+createdAt: "2026-05-18T12:00:00-07:00"
+ownerTeam: "Product"
+visibility: "product"
+reliability: "authoritative"
+
+capabilities:
+  - capabilityId: "cap_admin_audit_logs"
+    name: "Admin Audit Logs"
+    productAreaId: "prod_security"
+    status: "generally_available"
+    customerFacingDescription: "Admin actions in configured workflows are logged for authorized admins."
+    internalNotes: "Immutable audit exports are not part of the pilot."
+    allowedInPilot: true
+    requiresApproval: false
+    approvalOwnerPersonId: "person_northstar_health_omar_patel"
+    supportedIntegrations: ["Admin Console"]
+    unsupportedIntegrations: ["Immutable Audit Export"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "Admin audit logs are included for configured workflow actions."
+      blockedClaims:
+        - "Immutable audit exports are included in the pilot."
+      safeAlternativeWording:
+        - "Admin audit logs are included; immutable audit exports are not included in the pilot scope."
+  - capabilityId: "cap_regulated_workflows"
+    name: "Regulated Workflow Controls"
+    productAreaId: "prod_compliance"
+    status: "pilot_only"
+    customerFacingDescription: "Regulated workflow controls can be configured after legal and security prerequisites are complete."
+    internalNotes: "Do not process patient-adjacent workflow data before executed BAA."
+    allowedInPilot: true
+    requiresApproval: true
+    approvalOwnerPersonId: "person_northstar_health_grace_wu"
+    supportedIntegrations: ["Role-Based Queues"]
+    unsupportedIntegrations: ["PHI Processing Before BAA"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "We can configure regulated workflow controls after BAA execution and procurement approval."
+      blockedClaims:
+        - "The BAA language is already approved and onboarding will start next week."
+      safeAlternativeWording:
+        - "We’ll send the approved security materials now and confirm BAA timing before finalizing the kickoff date."

@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_helio_grid_energy_regulated_pilot,acct_helio_grid_energy,Regulated Infrastructure Pilot,legal,240000,2026-05-30,person_helio_grid_energy_rowan_pike,new_business,grid event simulation and operator approval workflow,manual dispatch review spreadsheets,Clarify pilot safety boundary and send SOW for signature,commit

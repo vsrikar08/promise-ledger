@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_northstar_health",
+  "commitments": [
+    {
+      "commitmentId": "com_northstar_health_security_packet_customer_ask",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Northstar asks for SOC 2, encryption overview, subprocessors, and audit log description by Friday.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_northstar_health_priya_shah",
+      "promisedToPersonId": "person_northstar_health_maya_chen",
+      "ownerPersonId": "person_northstar_health_maya_chen",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "The ask sets the content boundary for the security packet due Friday.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_security",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L003 00:01:02",
+          "quote": "The security packet must include SOC 2, encryption overview, subprocessors, and audit log description by Friday."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_security_packet_by_friday",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Send the approved security packet to Northstar by Friday, May 22.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_renee_cole",
+      "ownerPersonId": "person_northstar_health_omar_patel",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Procurement cannot move without the packet, and the customer named Friday as a target.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_security",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_email_2026_05_18_procurement_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L004 00:01:36",
+          "quote": "We will send the approved security packet by Friday, May 22."
+        },
+        {
+          "sourceId": "src_northstar_health_email_2026_05_18_procurement_thread",
+          "locator": "email_northstar_procurement_001",
+          "quote": "We’ll send the approved security materials by Friday, May 22."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_confirm_baa_timing",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Coordinate BAA review with Legal and return timing before kickoff is finalized.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_renee_cole",
+      "ownerPersonId": "person_northstar_health_grace_wu",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-26",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "BAA timing gates kickoff and patient-adjacent workflow data processing.",
+      "confidence": 0.88,
+      "linkedProductAreaId": "prod_legal",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_slack_2026_05_18_legal_security_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L006 00:02:30",
+          "quote": "I will coordinate BAA review with Legal today and come back with timing."
+        },
+        {
+          "sourceId": "src_northstar_health_slack_2026_05_18_legal_security_thread",
+          "locator": "slack_msg_northstar_legal_002",
+          "quote": "BAA language is still under Legal review; do not tell Northstar it is approved."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_onboarding_7_day_expectation",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Customer may expect onboarding to start in 7 days if procurement moves quickly.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_renee_cole",
+      "ownerPersonId": "person_northstar_health_leo_grant",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-25",
+      "status": "needs_review",
+      "risk": "high",
+      "riskReason": "The SOW requires kickoff within 15 business days after security approval, signed BAA, and PO.",
+      "confidence": 0.86,
+      "linkedProductAreaId": "prod_implementation",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_sow_2026_05_22"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L008 00:03:42",
+          "quote": "If procurement moves, onboarding can start in 7 days."
+        },
+        {
+          "sourceId": "src_northstar_health_sow_2026_05_22",
+          "locator": "Timeline",
+          "quote": "Kickoff occurs within 15 business days after security approval, signed BAA, and procurement PO are complete."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_procurement_portal_by_may_19",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Northstar will send the procurement portal link by Tuesday, May 19.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_northstar_health_victor_han",
+      "promisedToPersonId": "person_northstar_health_omar_patel",
+      "ownerPersonId": "person_northstar_health_victor_han",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-19",
+      "status": "waiting_on_customer",
+      "risk": "low",
+      "riskReason": "Portal access is required before the vendor can upload procurement evidence.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_procurement",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_email_2026_05_18_procurement_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L012 00:06:24",
+          "quote": "I will send the procurement portal link by Tuesday, May 19."
+        },
+        {
+          "sourceId": "src_northstar_health_email_2026_05_18_procurement_thread",
+          "locator": "email_northstar_procurement_002",
+          "quote": "I will send the procurement portal link by Tuesday, May 19."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_legal_redlines_by_may_20",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Northstar Legal will send redlines by Wednesday, May 20.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_northstar_health_dana_ortiz",
+      "promisedToPersonId": "person_northstar_health_grace_wu",
+      "ownerPersonId": "person_northstar_health_dana_ortiz",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-20",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Legal redlines determine BAA timing and kickoff readiness.",
+      "confidence": 0.91,
+      "linkedProductAreaId": "prod_legal",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_email_2026_05_18_procurement_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L013 00:06:55",
+          "quote": "I will send legal redlines by Wednesday, May 20."
+        },
+        {
+          "sourceId": "src_northstar_health_email_2026_05_18_procurement_thread",
+          "locator": "email_northstar_procurement_003",
+          "quote": "I will send legal redlines by Wednesday, May 20."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_admin_audit_logs_included",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Include admin audit logs for configured workflow actions.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_maya_chen",
+      "ownerPersonId": "person_northstar_health_hanna_li",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-12",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Audit logs are in scope, but export format remains limited.",
+      "confidence": 0.89,
+      "linkedProductAreaId": "prod_audit_logs",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_product_scope_2026_05_18"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L011 00:05:58",
+          "quote": "We will include admin audit logs in the proposal scope."
+        },
+        {
+          "sourceId": "src_northstar_health_product_scope_2026_05_18",
+          "locator": "cap_admin_audit_logs.promiseGuardPolicy.allowedClaims",
+          "quote": "Admin audit logs are included for configured workflow actions."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_baa_not_approved",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Do not claim BAA language is approved before Legal review is complete.",
+      "type": "unsupported_claim",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_renee_cole",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-26",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "The claim conflicts with Legal Slack, the SOW exclusion, and the product guard policy.",
+      "confidence": 0.96,
+      "linkedProductAreaId": "prod_legal",
+      "linkedSourceIds": [
+        "src_northstar_health_slack_2026_05_18_legal_security_thread",
+        "src_northstar_health_sow_2026_05_22",
+        "src_northstar_health_product_scope_2026_05_18"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_slack_2026_05_18_legal_security_thread",
+          "locator": "slack_msg_northstar_legal_002",
+          "quote": "BAA language is still under Legal review; do not tell Northstar it is approved."
+        },
+        {
+          "sourceId": "src_northstar_health_sow_2026_05_22",
+          "locator": "Exclusions",
+          "quote": "BAA language remains subject to final Legal review."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_sow_15_business_days",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Kickoff will occur within 15 business days after security approval, signed BAA, and PO.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_northstar_health_grace_wu",
+      "promisedToPersonId": "person_northstar_health_dana_ortiz",
+      "ownerPersonId": "person_northstar_health_leo_grant",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-12",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "This authoritative SOW language limits the earlier 7-day onboarding expectation.",
+      "confidence": 0.95,
+      "linkedProductAreaId": "prod_implementation",
+      "linkedSourceIds": [
+        "src_northstar_health_sow_2026_05_22"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_sow_2026_05_22",
+          "locator": "Timeline",
+          "quote": "Kickoff occurs within 15 business days after security approval, signed BAA, and procurement PO are complete."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_procurement_approval_by_may_27",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Northstar procurement approval is targeted for May 27 if required materials and BAA path are acceptable.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_northstar_health_victor_han",
+      "promisedToPersonId": "person_northstar_health_omar_patel",
+      "ownerPersonId": "person_northstar_health_victor_han",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-27",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "The approval depends on the security packet and BAA path.",
+      "confidence": 0.84,
+      "linkedProductAreaId": "prod_procurement",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_email_2026_05_18_procurement_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L019 00:10:54",
+          "quote": "If the security packet is complete by Friday, I can target procurement approval by May 27."
+        },
+        {
+          "sourceId": "src_northstar_health_email_2026_05_18_procurement_thread",
+          "locator": "email_northstar_procurement_002",
+          "quote": "Procurement approval is targeted for May 27 if the security packet and BAA path are acceptable."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_portal_upload_owner",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Assign an owner for the Northstar procurement portal checklist.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_northstar_health_maya_chen",
+      "promisedToPersonId": "person_northstar_health_omar_patel",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-22",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "A due date exists but Slack indicates no owner is assigned for portal upload work.",
+      "confidence": 0.87,
+      "linkedProductAreaId": "prod_procurement",
+      "linkedSourceIds": [
+        "src_northstar_health_slack_2026_05_18_legal_security_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_slack_2026_05_18_legal_security_thread",
+          "locator": "slack_msg_northstar_legal_005",
+          "quote": "I do not see an owner assigned for the portal checklist."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_northstar_health_timeline_contradiction",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "normalizedText": "Resolve contradiction between the 7-day onboarding statement and the SOW kickoff condition.",
+      "type": "contradiction",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_northstar_health_omar_patel",
+      "promisedToPersonId": "person_northstar_health_renee_cole",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-26",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Customer-facing timeline conflicts with authoritative SOW language.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_implementation",
+      "linkedSourceIds": [
+        "src_northstar_health_call_2026_05_18_security_review",
+        "src_northstar_health_sow_2026_05_22"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+          "locator": "L008 00:03:42",
+          "quote": "If procurement moves, onboarding can start in 7 days."
+        },
+        {
+          "sourceId": "src_northstar_health_sow_2026_05_22",
+          "locator": "Timeline",
+          "quote": "Kickoff occurs within 15 business days after security approval, signed BAA, and procurement PO are complete."
+        }
+      ]
+    }
+  ]
+}

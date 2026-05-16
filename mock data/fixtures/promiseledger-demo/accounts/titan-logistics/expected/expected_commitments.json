@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_titan_logistics",
+  "commitments": [
+    {
+      "commitmentId": "com_titan_logistics_guaranteed_sla_unsupported_claim",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Do not claim a guaranteed Monday resolution SLA for the routing dashboard issue.",
+      "type": "unsupported_claim",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_titan_logistics_jordan_miles",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-25",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "The claim is blocked by policy boundaries and conflicts with best-effort support terms.",
+      "confidence": 0.97,
+      "linkedProductAreaId": "prod_support",
+      "linkedSourceIds": [
+        "src_titan_logistics_policy_boundaries_2026_05_20",
+        "src_titan_logistics_order_form_2026_05_01"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_policy_boundaries_2026_05_20",
+          "locator": "cap_support_targets.promiseGuardPolicy.blockedClaims",
+          "quote": "We guarantee the routing dashboard issue will be fully resolved by Monday under your SLA."
+        },
+        {
+          "sourceId": "src_titan_logistics_order_form_2026_05_01",
+          "locator": "Exclusions",
+          "quote": "The order form does not guarantee full resolution by a specific date."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_resolution_plan_by_monday",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Share a confirmed routing dashboard resolution plan and named owner by Monday, May 25.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_jordan_miles",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "person_titan_logistics_jordan_miles",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-25",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "The plan is tied to renewal confidence and must not be overstated as a guaranteed fix.",
+      "confidence": 0.95,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_email_2026_05_20_renewal_followup"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L007 00:03:40",
+          "quote": "We will share a confirmed resolution plan and named owner by Monday, May 25."
+        },
+        {
+          "sourceId": "src_titan_logistics_email_2026_05_20_renewal_followup",
+          "locator": "email_titan_renewal_001",
+          "quote": "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_escalate_to_product_today",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Escalate the routing dashboard issue to Product on May 20.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_casey_nguyen",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "person_titan_logistics_casey_nguyen",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-20",
+      "status": "fulfilled",
+      "risk": "medium",
+      "riskReason": "Escalation is complete, but a Product owner is still missing.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_support_2026_05_19_routing_dashboard"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L006 00:03:04",
+          "quote": "We will escalate the routing dashboard issue to Product today."
+        },
+        {
+          "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+          "locator": "ticket_event_004",
+          "quote": "Escalated to Priya Nair for triage and Product routing."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_dashboard_back_by_monday",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Soft support expectation that dashboard may be back by Monday if Product confirms the aggregation fix.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_casey_nguyen",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-25",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "This can be misread as an SLA despite no owner and no root cause confirmation.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_support_2026_05_19_routing_dashboard",
+        "src_titan_logistics_slack_2026_05_20_support_escalation"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+          "locator": "ticket_event_003",
+          "quote": "I expect we can get the dashboard back by Monday, May 25 if Product confirms the aggregation fix."
+        },
+        {
+          "sourceId": "src_titan_logistics_slack_2026_05_20_support_escalation",
+          "locator": "slack_msg_titan_support_003",
+          "quote": "No product owner assigned yet for the routing dashboard fix."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_best_effort_support_terms",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Support targets are commercially reasonable efforts, not guaranteed resolution times.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_jordan_miles",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "person_titan_logistics_priya_nair",
+      "ownerSide": "internal",
+      "dueDate": "2026-08-31",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "This authoritative contract term limits the support team's Monday-resolution language.",
+      "confidence": 0.96,
+      "linkedProductAreaId": "prod_support",
+      "linkedSourceIds": [
+        "src_titan_logistics_order_form_2026_05_01"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_order_form_2026_05_01",
+          "locator": "SLAs / Support Terms",
+          "quote": "Support targets are commercially reasonable efforts and are not guaranteed resolution times."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_route_ids_by_may_21",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Titan will provide affected route IDs by Thursday, May 21.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_titan_logistics_nina_alvarez",
+      "promisedToPersonId": "person_titan_logistics_casey_nguyen",
+      "ownerPersonId": "person_titan_logistics_nina_alvarez",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-21",
+      "status": "waiting_on_customer",
+      "risk": "low",
+      "riskReason": "Route IDs are needed for support to reproduce the issue.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_email_2026_05_20_renewal_followup"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L008 00:04:21",
+          "quote": "I can send affected route IDs by Thursday, May 21."
+        },
+        {
+          "sourceId": "src_titan_logistics_email_2026_05_20_renewal_followup",
+          "locator": "email_titan_renewal_002",
+          "quote": "I will send the affected route IDs by Thursday, May 21."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_routing_dashboard_customer_ask",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Customer needs the blank routing dashboard issue resolved or explained before renewal can proceed.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_logan_pierce",
+      "promisedToPersonId": "person_titan_logistics_jordan_miles",
+      "ownerPersonId": "person_titan_logistics_jordan_miles",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-30",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "The customer directly ties the issue to renewal justification.",
+      "confidence": 0.91,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_support_2026_05_19_routing_dashboard"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L002 00:00:42",
+          "quote": "The routing dashboard is blank for dispatch managers, and renewal is hard to justify while this is open."
+        },
+        {
+          "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+          "locator": "ticket_event_001",
+          "quote": "Routing dashboard is blank for dispatch managers and route exceptions are not visible. This is blocking the renewal review."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_exec_status_by_may_30",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Send an executive-ready status update by May 30.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_jordan_miles",
+      "promisedToPersonId": "person_titan_logistics_shawn_briggs",
+      "ownerPersonId": "person_titan_logistics_jordan_miles",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-30",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "The update influences Shawn and Morgan's renewal approval path.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_renewal",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_email_2026_05_20_renewal_followup"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L011 00:06:10",
+          "quote": "We will give you an executive-ready status update by May 30."
+        },
+        {
+          "sourceId": "src_titan_logistics_email_2026_05_20_renewal_followup",
+          "locator": "email_titan_renewal_001",
+          "quote": "We will also send an executive-ready status update by May 30"
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_dashboard_fix_owner",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Assign one Product owner for the routing dashboard fix before the Monday customer update.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_titan_logistics_priya_nair",
+      "promisedToPersonId": "person_titan_logistics_jordan_miles",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-25",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Customer-facing follow-up promises a named owner, but internal Slack says none exists yet.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_slack_2026_05_20_support_escalation",
+        "src_titan_logistics_renewal_note_2026_05_21"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_slack_2026_05_20_support_escalation",
+          "locator": "slack_msg_titan_support_003",
+          "quote": "No product owner assigned yet for the routing dashboard fix."
+        },
+        {
+          "sourceId": "src_titan_logistics_renewal_note_2026_05_21",
+          "locator": "Open Risks",
+          "quote": "No owner assigned for dashboard fix as of May 21."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_carrier_eta_stale",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Carrier ETA variance dashboard was expected by May 8 and is stale.",
+      "type": "expectation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_titan_logistics_logan_pierce",
+      "promisedToPersonId": "person_titan_logistics_jordan_miles",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-08",
+      "status": "stale",
+      "risk": "high",
+      "riskReason": "An old unfulfilled expectation is part of the renewal risk.",
+      "confidence": 0.84,
+      "linkedProductAreaId": "prod_routing_dashboard",
+      "linkedSourceIds": [
+        "src_titan_logistics_call_2026_05_20_renewal",
+        "src_titan_logistics_qbr_2026_05_20"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+          "locator": "L013 00:07:30",
+          "quote": "Last quarter we were told the carrier ETA variance dashboard would be done by May 8."
+        },
+        {
+          "sourceId": "src_titan_logistics_qbr_2026_05_20",
+          "locator": "Promises Made Previously",
+          "quote": "The carrier ETA variance dashboard was promised for May 8, 2026 and is still not accepted by Titan."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_titan_logistics_support_sla_contradiction",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "normalizedText": "Resolve contradiction between Monday resolution language and best-effort support terms.",
+      "type": "contradiction",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_titan_logistics_casey_nguyen",
+      "promisedToPersonId": "person_titan_logistics_logan_pierce",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-25",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Support language could create an unsupported SLA-like promise that conflicts with the order form.",
+      "confidence": 0.95,
+      "linkedProductAreaId": "prod_support",
+      "linkedSourceIds": [
+        "src_titan_logistics_support_2026_05_19_routing_dashboard",
+        "src_titan_logistics_order_form_2026_05_01"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+          "locator": "ticket_event_003",
+          "quote": "I expect we can get the dashboard back by Monday, May 25 if Product confirms the aggregation fix."
+        },
+        {
+          "sourceId": "src_titan_logistics_order_form_2026_05_01",
+          "locator": "SLAs / Support Terms",
+          "quote": "Support targets are commercially reasonable efforts and are not guaranteed resolution times."
+        }
+      ]
+    }
+  ]
+}

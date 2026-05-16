@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_titan_logistics",
+  "accountSlug": "titan-logistics",
+  "accountName": "Titan Logistics",
+  "industry": "logistics and fleet operations",
+  "scenarioType": "renewal",
+  "fixtureIntent": {
+    "primaryDemoMoment": "support_sla_mismatch",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_titan_logistics_crm_account_2026_05_20",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_crm_contacts_2026_05_20",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_logan_pierce",
+        "person_titan_logistics_nina_alvarez",
+        "person_titan_logistics_shawn_briggs",
+        "person_titan_logistics_morgan_lee",
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_casey_nguyen",
+        "person_titan_logistics_priya_nair",
+        "person_titan_logistics_tessa_brooks",
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_crm_opportunity_2026_05_20",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_crm_tasks_2026_05_20",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_casey_nguyen"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_call_2026_05_20_renewal",
+      "path": "calls/2026-05-20__renewal-call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-20",
+      "system": "zoom",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_logan_pierce",
+        "person_titan_logistics_nina_alvarez",
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_casey_nguyen",
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_email_2026_05_20_renewal_followup",
+      "path": "emails/2026-05-20__renewal-followup-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-20",
+      "system": "gmail",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_logan_pierce",
+        "person_titan_logistics_nina_alvarez",
+        "person_titan_logistics_shawn_briggs",
+        "person_titan_logistics_jordan_miles"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_proposal_2026_05_21",
+      "path": "proposals/2026-05-21__renewal-proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-21",
+      "system": "google_docs",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_evan_holt",
+        "person_titan_logistics_logan_pierce"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_order_form_2026_05_01",
+      "path": "contracts/2026-05-01__order-form.md",
+      "sourceType": "order_form",
+      "date": "2026-05-01",
+      "system": "google_docs",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_logan_pierce"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+      "path": "support/2026-05-19__support-ticket.jsonl",
+      "sourceType": "support_ticket",
+      "date": "2026-05-19",
+      "system": "zendesk",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_nina_alvarez",
+        "person_titan_logistics_casey_nguyen",
+        "person_titan_logistics_priya_nair"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_support_2026_05_20_escalation_thread",
+      "path": "support/2026-05-20__escalation-thread.jsonl",
+      "sourceType": "support_escalation",
+      "date": "2026-05-20",
+      "system": "zendesk",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_casey_nguyen",
+        "person_titan_logistics_priya_nair",
+        "person_titan_logistics_tessa_brooks"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_slack_2026_05_20_support_escalation",
+      "path": "slack/2026-05-20__support-escalation-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-20",
+      "system": "slack",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_casey_nguyen",
+        "person_titan_logistics_priya_nair",
+        "person_titan_logistics_tessa_brooks",
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_policy_boundaries_2026_05_20",
+      "path": "product/policy-boundaries.yml",
+      "sourceType": "policy_boundaries",
+      "date": "2026-05-20",
+      "system": "notion",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_priya_nair",
+        "person_titan_logistics_tessa_brooks"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_qbr_2026_05_20",
+      "path": "renewal/2026-05-20__qbr-notes.md",
+      "sourceType": "qbr_notes",
+      "date": "2026-05-20",
+      "system": "notion",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_jordan_miles",
+        "person_titan_logistics_evan_holt"
+      ]
+    },
+    {
+      "sourceId": "src_titan_logistics_renewal_note_2026_05_21",
+      "path": "renewal/2026-05-21__renewal-risk-note.md",
+      "sourceType": "renewal_note",
+      "date": "2026-05-21",
+      "system": "notion",
+      "accountId": "acct_titan_logistics",
+      "dealId": "deal_titan_logistics_renewal",
+      "participants": [
+        "person_titan_logistics_evan_holt"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true
+  }
+}

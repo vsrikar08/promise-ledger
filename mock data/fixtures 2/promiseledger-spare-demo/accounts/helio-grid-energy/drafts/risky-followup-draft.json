@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_helio_grid_energy_risky_followup",
+  "accountId": "acct_helio_grid_energy",
+  "dealId": "deal_helio_grid_energy_regulated_pilot",
+  "authorPersonId": "person_helio_grid_energy_rowan_pike",
+  "createdAt": "2026-05-17T19:15:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "HelioGrid pilot automation confirmation",
+  "bodyMarkdown": "Hi Maya,\n\nWe can enable live grid-dispatch automation during the pilot. The operator approval queue will be able to approve live actions during the May 29 tabletop, and we can connect that path as soon as the event logs arrive.\n\nBest,\nRowan",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We can enable live grid-dispatch automation during the pilot.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "The operator approval queue will be able to approve live actions during the May 29 tabletop.",
+      "claimType": "safety_boundary",
+      "shouldBeAllowed": false
+    }
+  ]
+}

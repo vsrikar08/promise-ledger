@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_titan_logistics_safe_followup",
+  "accountId": "acct_titan_logistics",
+  "dealId": "deal_titan_logistics_renewal",
+  "authorPersonId": "person_titan_logistics_jordan_miles",
+  "createdAt": "2026-05-20T19:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Routing dashboard escalation plan",
+  "bodyMarkdown": "Hi Logan,\n\nWe’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday.\n\nWe will avoid SLA guarantee language until we complete contract review. Nina, once you send the affected route IDs by Thursday, May 21, Support will use them to validate the nightly sync issue.\n\nWe will also send an executive-ready status update by May 30.\n\nBest,\nJordan",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday.",
+      "claimType": "support_sla",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We will avoid SLA guarantee language until we complete contract review.",
+      "claimType": "legal",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_003",
+      "text": "We will also send an executive-ready status update by May 30.",
+      "claimType": "timeline",
+      "shouldBeAllowed": true
+    }
+  ]
+}

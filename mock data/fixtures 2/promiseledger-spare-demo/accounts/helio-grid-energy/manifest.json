@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_helio_grid_energy",
+  "accountSlug": "helio-grid-energy",
+  "accountName": "HelioGrid Energy",
+  "industry": "renewable energy and grid operations",
+  "scenarioType": "regulated_infrastructure_pilot",
+  "fixtureIntent": {
+    "primaryDemoMoment": "unsupported_live_automation_promise",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_helio_grid_energy_crm_account_2026_05_16",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_maya_torres",
+        "person_helio_grid_energy_felix_nouri",
+        "person_helio_grid_energy_priya_shah",
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_crm_contacts_2026_05_16",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_maya_torres",
+        "person_helio_grid_energy_felix_nouri",
+        "person_helio_grid_energy_priya_shah",
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_crm_opportunity_2026_05_16",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_felix_nouri"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_crm_tasks_2026_05_16",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+      "path": "calls/2026-05-17__pilot-scope-call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-17",
+      "system": "gong",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_maya_torres",
+        "person_helio_grid_energy_felix_nouri",
+        "person_helio_grid_energy_priya_shah",
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_email_2026_05_17_pilot_followup",
+      "path": "emails/2026-05-17__pilot-followup-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-17",
+      "system": "gmail",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_maya_torres",
+        "person_helio_grid_energy_felix_nouri",
+        "person_helio_grid_energy_priya_shah",
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_proposal_2026_05_18",
+      "path": "proposals/2026-05-18__pilot-proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-18",
+      "system": "google_docs",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_sow_2026_05_24",
+      "path": "contracts/2026-05-24__pilot-sow.md",
+      "sourceType": "sow",
+      "date": "2026-05-24",
+      "system": "google_docs",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_priya_shah",
+        "person_helio_grid_energy_nora_bell",
+        "person_helio_grid_energy_rowan_pike"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff",
+      "path": "slack/2026-05-17__sales-engineering-handoff.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-17",
+      "system": "slack",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_rowan_pike",
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_slack_2026_05_18_product_policy",
+      "path": "slack/2026-05-18__product-policy-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-18",
+      "system": "slack",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_product_scope_2026_05_17",
+      "path": "product/product-scope.yml",
+      "sourceType": "product_scope",
+      "date": "2026-05-17",
+      "system": "notion",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_theo_grant"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_policy_boundaries_2026_05_18",
+      "path": "product/policy-boundaries.yml",
+      "sourceType": "policy_boundaries",
+      "date": "2026-05-18",
+      "system": "notion",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_theo_grant",
+        "person_helio_grid_energy_nora_bell"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_risk_review_2026_05_19",
+      "path": "security_legal/2026-05-19__risk-review.md",
+      "sourceType": "risk_review",
+      "date": "2026-05-19",
+      "system": "notion",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_nora_bell",
+        "person_helio_grid_energy_priya_shah"
+      ]
+    },
+    {
+      "sourceId": "src_helio_grid_energy_onboarding_plan_2026_05_25",
+      "path": "onboarding/2026-05-25__implementation-plan.yml",
+      "sourceType": "onboarding_plan",
+      "date": "2026-05-25",
+      "system": "google_docs",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "participants": [
+        "person_helio_grid_energy_lina_ortiz",
+        "person_helio_grid_energy_maya_torres"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true,
+    "doNotMakeEveryContradictionObvious": true
+  }
+}

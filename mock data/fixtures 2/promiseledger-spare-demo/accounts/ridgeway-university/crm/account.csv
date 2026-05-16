@@ -1,0 +1,2 @@
+account_id,account_name,domain,industry,segment,arr,region,account_owner_id,cs_owner_id,health,status,next_renewal_date,notes
+acct_ridgeway_university,Ridgeway University,ridgewayu.example,higher education administration,enterprise,210000,NA-Central,person_ridgeway_university_sierra_patton,person_ridgeway_university_owen_rios,yellow,prospect,2027-06-15,Student services onboarding; privacy boundary requires DPA approval and sandbox-only testing before production roster processing.

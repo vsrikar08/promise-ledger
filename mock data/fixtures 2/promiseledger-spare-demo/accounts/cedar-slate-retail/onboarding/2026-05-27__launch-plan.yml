@@ -1,0 +1,56 @@
+schemaVersion: '0.1'
+sourceId: src_cedar_slate_retail_onboarding_plan_2026_05_27
+sourceType: onboarding_plan
+accountId: acct_cedar_slate_retail
+dealId: deal_cedar_slate_retail_expansion_launch
+createdAt: '2026-05-27T09:00:00-07:00'
+visibility: customer_facing
+reliability: high
+milestones:
+- milestoneId: ms_cedar_daily_inventory_batch
+  title: Daily inventory batch sync
+  ownerPersonId: person_cedar_slate_retail_diego_santos
+  ownerSide: internal
+  dueDate: '2026-06-02'
+  status: not_started
+  dependencies:
+  - POS field map
+  - sandbox credentials
+  sourceText: Daily inventory batch sync ready by 2026-06-02.
+- milestoneId: ms_cedar_daily_batch_reconciliation
+  title: Daily batch reconciliation
+  ownerPersonId: person_cedar_slate_retail_diego_santos
+  ownerSide: internal
+  dueDate: '2026-06-03'
+  status: not_started
+  dependencies:
+  - settlement file sample
+  sourceText: Daily batch reconciliation ready by 2026-06-03.
+- milestoneId: ms_cedar_customer_pos_map
+  title: POS field map and sandbox credentials
+  ownerPersonId: person_cedar_slate_retail_elise_morgan
+  ownerSide: customer
+  dueDate: '2026-05-24'
+  status: blocked
+  dependencies:
+  - customer provided files
+  sourceText: Cedar & Slate will provide POS field map and sandbox credentials by 2026-05-24.
+- milestoneId: ms_cedar_launch_dashboard
+  title: Executive launch readiness dashboard
+  ownerPersonId: person_cedar_slate_retail_diego_santos
+  ownerSide: internal
+  dueDate: '2026-06-05'
+  status: not_started
+  dependencies:
+  - daily batch sync
+  - mapping status
+  sourceText: Executive launch readiness dashboard available by 2026-06-05.
+risks:
+- riskId: risk_cedar_realtime_payment_language
+  title: Real-time payment wording could overstate pilot scope
+  severity: critical
+  reason: Product support matrix says real-time payment reconciliation is planned, not generally available.
+- riskId: risk_cedar_store_014_mapping
+  title: Store 014 mapping issue blocks launch readiness
+  severity: high
+  reason: Customer reported mismatched ecommerce inventory after overnight import.

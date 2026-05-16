@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_ridgeway_university_risky_followup",
+  "accountId": "acct_ridgeway_university",
+  "dealId": "deal_ridgeway_university_student_services_onboarding",
+  "authorPersonId": "person_ridgeway_university_sierra_patton",
+  "createdAt": "2026-05-22T16:15:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Ridgeway production roster onboarding",
+  "bodyMarkdown": "Hi Hannah,\n\nWe can start processing production student roster data next week before the DPA is finalized. Send the production CSV on Tuesday and we will use it to accelerate onboarding before sandbox validation is complete.\n\nBest,\nSierra",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We can start processing production student roster data next week before the DPA is finalized.",
+      "claimType": "privacy",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "Send the production CSV on Tuesday and we will use it to accelerate onboarding before sandbox validation is complete.",
+      "claimType": "privacy",
+      "shouldBeAllowed": false
+    }
+  ]
+}

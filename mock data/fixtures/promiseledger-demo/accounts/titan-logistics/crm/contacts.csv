@@ -1,0 +1,10 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_titan_logistics_logan_pierce,acct_titan_logistics,Logan Pierce,VP Fleet Operations,logan.pierce@titanlogistics.example,economic_buyer,decision_maker,executive,true,false
+person_titan_logistics_nina_alvarez,acct_titan_logistics,Nina Alvarez,Fleet Systems Admin,nina.alvarez@titanlogistics.example,admin,influencer,manager,true,false
+person_titan_logistics_shawn_briggs,acct_titan_logistics,Shawn Briggs,Finance Director,shawn.briggs@titanlogistics.example,procurement,blocker,executive,true,false
+person_titan_logistics_morgan_lee,acct_titan_logistics,Morgan Lee,Chief Technology Officer,morgan.lee@titanlogistics.example,technical_evaluator,influencer,executive,true,false
+person_titan_logistics_jordan_miles,acct_titan_logistics,Jordan Miles,Customer Success Manager,jordan.miles@promiseledger-demo.example,account_owner,influencer,manager,false,true
+person_titan_logistics_casey_nguyen,acct_titan_logistics,Casey Nguyen,Support Engineer,casey.nguyen@promiseledger-demo.example,support,user,ic,false,true
+person_titan_logistics_priya_nair,acct_titan_logistics,Priya Nair,Support Manager,priya.nair@promiseledger-demo.example,support,decision_maker,manager,false,true
+person_titan_logistics_tessa_brooks,acct_titan_logistics,Tessa Brooks,Product Lead,tessa.brooks@promiseledger-demo.example,product,decision_maker,manager,false,true
+person_titan_logistics_evan_holt,acct_titan_logistics,Evan Holt,Renewals Manager,evan.holt@promiseledger-demo.example,account_owner,influencer,manager,false,true

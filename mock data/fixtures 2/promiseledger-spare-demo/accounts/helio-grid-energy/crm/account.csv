@@ -1,0 +1,2 @@
+account_id,account_name,domain,industry,segment,arr,region,account_owner_id,cs_owner_id,health,status,next_renewal_date,notes
+acct_helio_grid_energy,HelioGrid Energy,helio-grid.example,renewable energy and grid operations,enterprise,240000,NA-West,person_helio_grid_energy_rowan_pike,person_helio_grid_energy_lina_ortiz,yellow,prospect,2027-06-01,"Regulated infrastructure pilot; customer is sensitive to live dispatch, safety review, and auditability."

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_helio_grid_energy",
+  "contradictions": [
+    {
+      "contradictionId": "contra_helio_grid_energy_live_dispatch_policy",
+      "accountId": "acct_helio_grid_energy",
+      "severity": "critical",
+      "category": "safety_boundary_mismatch",
+      "summary": "The call implied possible live dispatch automation during the pilot, while authoritative product policy prohibits live control-plane actions in any pilot.",
+      "claimA": {
+        "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "text": "If the safety review looks clean, we should be able to let the workflow dispatch automatically during the pilot window.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_helio_grid_energy_policy_boundaries_2026_05_18",
+        "text": "No live control-plane actions or automatic grid dispatch may be enabled during any pilot.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Block live automation language and use the approved simulation plus operator approval wording until a signed safety amendment exists."
+    },
+    {
+      "contradictionId": "contra_helio_grid_energy_call_vs_proposal_scope",
+      "accountId": "acct_helio_grid_energy",
+      "severity": "high",
+      "category": "feature_scope_mismatch",
+      "summary": "The call suggested dispatch could become automatic during the pilot, but the sent proposal limits the pilot to simulation and operator-approved recommendations.",
+      "claimA": {
+        "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "text": "If the safety review looks clean, we should be able to let the workflow dispatch automatically during the pilot window.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_helio_grid_energy_proposal_2026_05_18",
+        "text": "Pilot deliverables are limited to simulation runs and operator-approved recommendations.",
+        "reliability": "high"
+      },
+      "recommendedResolution": "Send a clarification that the pilot is simulation-only and that live automation is outside current scope."
+    }
+  ]
+}

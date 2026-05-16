@@ -1,0 +1,8 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_cedar_slate_retail_elise_morgan,acct_cedar_slate_retail,Elise Morgan,VP Store Operations,elise.morgan@cedarslate.example,economic_buyer,decision_maker,executive,true,false
+person_cedar_slate_retail_omar_linden,acct_cedar_slate_retail,Omar Linden,Director of Ecommerce Systems,omar.linden@cedarslate.example,technical_evaluator,influencer,manager,true,false
+person_cedar_slate_retail_talia_chen,acct_cedar_slate_retail,Talia Chen,Finance Controller,talia.chen@cedarslate.example,champion,influencer,manager,true,false
+person_cedar_slate_retail_mira_chen,acct_cedar_slate_retail,Mira Chen,Account Executive,mira.chen@promiseledger.example,admin,influencer,manager,false,true
+person_cedar_slate_retail_diego_santos,acct_cedar_slate_retail,Diego Santos,Implementation Lead,diego.santos@promiseledger.example,admin,influencer,manager,false,true
+person_cedar_slate_retail_ivy_kapoor,acct_cedar_slate_retail,Ivy Kapoor,"Product Manager, Integrations",ivy.kapoor@promiseledger.example,technical_evaluator,influencer,manager,false,true
+person_cedar_slate_retail_jules_park,acct_cedar_slate_retail,Jules Park,Support Engineer,jules.park@promiseledger.example,technical_evaluator,user,ic,false,true

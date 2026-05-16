@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_titan_logistics",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 5,
+    "highRiskCommitmentCount": 9,
+    "missingOwnerCount": 5,
+    "dueThisWeekCount": 6,
+    "contradictionCount": 2,
+    "nextCriticalDate": "2026-05-21"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_titan_logistics_resolution_plan_by_monday",
+      "com_titan_logistics_dashboard_back_by_monday",
+      "com_titan_logistics_routing_dashboard_customer_ask",
+      "com_titan_logistics_exec_status_by_may_30",
+      "com_titan_logistics_carrier_eta_stale"
+    ],
+    "whatTheyOweUs": [
+      "com_titan_logistics_route_ids_by_may_21"
+    ],
+    "riskyCommitments": [
+      "com_titan_logistics_guaranteed_sla_unsupported_claim",
+      "com_titan_logistics_resolution_plan_by_monday",
+      "com_titan_logistics_dashboard_back_by_monday",
+      "com_titan_logistics_best_effort_support_terms",
+      "com_titan_logistics_routing_dashboard_customer_ask",
+      "com_titan_logistics_exec_status_by_may_30",
+      "com_titan_logistics_dashboard_fix_owner",
+      "com_titan_logistics_carrier_eta_stale",
+      "com_titan_logistics_support_sla_contradiction"
+    ],
+    "contradictions": [
+      "contra_titan_logistics_support_sla",
+      "contra_titan_logistics_owner_assignment"
+    ],
+    "dueThisWeek": [
+      "com_titan_logistics_guaranteed_sla_unsupported_claim",
+      "com_titan_logistics_resolution_plan_by_monday",
+      "com_titan_logistics_dashboard_back_by_monday",
+      "com_titan_logistics_route_ids_by_may_21",
+      "com_titan_logistics_dashboard_fix_owner",
+      "com_titan_logistics_support_sla_contradiction"
+    ],
+    "noOwnerPromises": [
+      "com_titan_logistics_guaranteed_sla_unsupported_claim",
+      "com_titan_logistics_dashboard_back_by_monday",
+      "com_titan_logistics_dashboard_fix_owner",
+      "com_titan_logistics_carrier_eta_stale",
+      "com_titan_logistics_support_sla_contradiction"
+    ],
+    "sourceTimeline": [
+      "src_titan_logistics_order_form_2026_05_01",
+      "src_titan_logistics_support_2026_05_19_routing_dashboard",
+      "src_titan_logistics_call_2026_05_20_renewal",
+      "src_titan_logistics_email_2026_05_20_renewal_followup",
+      "src_titan_logistics_support_2026_05_20_escalation_thread",
+      "src_titan_logistics_slack_2026_05_20_support_escalation",
+      "src_titan_logistics_policy_boundaries_2026_05_20",
+      "src_titan_logistics_qbr_2026_05_20",
+      "src_titan_logistics_renewal_note_2026_05_21",
+      "src_titan_logistics_proposal_2026_05_21"
+    ]
+  }
+}

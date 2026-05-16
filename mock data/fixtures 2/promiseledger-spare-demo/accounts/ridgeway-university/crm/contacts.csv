@@ -1,0 +1,8 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_ridgeway_university_hannah_brooks,acct_ridgeway_university,Hannah Brooks,Registrar,hannah.brooks@ridgewayu.example,champion,influencer,manager,true,false
+person_ridgeway_university_marcus_lee,acct_ridgeway_university,Marcus Lee,Director of IT,marcus.lee@ridgewayu.example,technical_evaluator,influencer,manager,true,false
+person_ridgeway_university_lena_ortega,acct_ridgeway_university,Lena Ortega,Procurement Counsel,lena.ortega@ridgewayu.example,legal,blocker,manager,true,false
+person_ridgeway_university_sierra_patton,acct_ridgeway_university,Sierra Patton,Account Executive,sierra.patton@promiseledger.example,admin,influencer,manager,false,true
+person_ridgeway_university_owen_rios,acct_ridgeway_university,Owen Rios,Customer Success Manager,owen.rios@promiseledger.example,admin,influencer,manager,false,true
+person_ridgeway_university_camille_yu,acct_ridgeway_university,Camille Yu,Legal Counsel,camille.yu@promiseledger.example,legal,blocker,manager,false,true
+person_ridgeway_university_neil_avery,acct_ridgeway_university,Neil Avery,Security Architect,neil.avery@promiseledger.example,technical_evaluator,blocker,manager,false,true

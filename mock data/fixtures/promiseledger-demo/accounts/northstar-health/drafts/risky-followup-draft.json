@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_northstar_health_risky_followup",
+  "accountId": "acct_northstar_health",
+  "dealId": "deal_northstar_health_regulated_workflow_deployment",
+  "authorPersonId": "person_northstar_health_omar_patel",
+  "createdAt": "2026-05-18T19:08:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Northstar approval and kickoff",
+  "bodyMarkdown": "Hi Renee,\n\nThe BAA language is already approved and onboarding will start next week. We can also provide immutable audit-log exports in the first release and start processing workflow data before the paperwork is fully complete.\n\nBest,\nOmar",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "The BAA language is already approved and onboarding will start next week.",
+      "claimType": "legal",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We can also provide immutable audit-log exports in the first release.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_003",
+      "text": "We can start processing workflow data before the paperwork is fully complete.",
+      "claimType": "legal",
+      "shouldBeAllowed": false
+    }
+  ]
+}

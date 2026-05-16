@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_cedar_slate_retail_risky_followup",
+  "accountId": "acct_cedar_slate_retail",
+  "dealId": "deal_cedar_slate_retail_expansion_launch",
+  "authorPersonId": "person_cedar_slate_retail_mira_chen",
+  "createdAt": "2026-05-21T16:15:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Cedar & Slate real-time launch confirmation",
+  "bodyMarkdown": "Hi Elise,\n\nReal-time payment reconciliation and payment token handling are included before launch. We can also commit to event-triggered inventory updates before June 10 so Store 014 does not block readiness.\n\nBest,\nMira",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "Real-time payment reconciliation and payment token handling are included before launch.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We can also commit to event-triggered inventory updates before June 10.",
+      "claimType": "implementation",
+      "shouldBeAllowed": false
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+account_id,account_name,domain,industry,segment,arr,region,account_owner_id,cs_owner_id,health,status,next_renewal_date,notes
+acct_titan_logistics,Titan Logistics,titanlogistics.example,logistics and fleet operations,enterprise,180000,North America,person_titan_logistics_evan_holt,person_titan_logistics_jordan_miles,red,churn_risk,2026-08-31,Renewal at risk due to routing dashboard issue and unresolved owner assignment.

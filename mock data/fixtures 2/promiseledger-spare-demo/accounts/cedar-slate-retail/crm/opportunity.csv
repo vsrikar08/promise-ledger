@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_cedar_slate_retail_expansion_launch,acct_cedar_slate_retail,Store Operations Expansion Launch,pilot,180000,2026-05-28,person_cedar_slate_retail_mira_chen,expansion,inventory sync and launch readiness dashboard,homegrown POS spreadsheet bridge,Confirm payment reconciliation scope and finalize launch plan,commit

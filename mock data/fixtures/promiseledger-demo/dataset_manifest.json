@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "datasetName": "promiseledger-demo",
+  "generatedAt": "2026-05-16T18:00:00-07:00",
+  "description": "Fictional PromiseLedger fixture dataset for hackathon demo.",
+  "accounts": [
+    {
+      "accountId": "acct_acme_robotics",
+      "accountSlug": "acme-robotics",
+      "accountName": "Acme Robotics",
+      "scenarioType": "new_business_pilot",
+      "primaryDemoMoment": "unsupported_product_promise"
+    },
+    {
+      "accountId": "acct_northstar_health",
+      "accountSlug": "northstar-health",
+      "accountName": "Northstar Health",
+      "scenarioType": "security_procurement",
+      "primaryDemoMoment": "timeline_mismatch"
+    },
+    {
+      "accountId": "acct_titan_logistics",
+      "accountSlug": "titan-logistics",
+      "accountName": "Titan Logistics",
+      "scenarioType": "support_escalation",
+      "primaryDemoMoment": "support_sla_mismatch"
+    }
+  ]
+}

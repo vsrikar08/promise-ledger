@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_northstar_health",
+  "guardCases": [
+    {
+      "draftId": "draft_northstar_health_safe_followup",
+      "expectedDecision": "warn",
+      "risk": "medium",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_northstar_health_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "The BAA language is already approved and onboarding will start next week.",
+          "reason": "Legal Slack and SOW both say BAA language remains under review, and kickoff timing depends on security approval, signed BAA, and PO.",
+          "conflictingSourceIds": [
+            "src_northstar_health_slack_2026_05_18_legal_security_thread",
+            "src_northstar_health_sow_2026_05_22",
+            "src_northstar_health_product_scope_2026_05_18"
+          ],
+          "safeAlternative": "We’ll send the approved security materials now and confirm BAA timing before finalizing the kickoff date."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "We can also provide immutable audit-log exports in the first release.",
+          "reason": "Product scope says immutable audit-log export is planned, not included in the first release.",
+          "conflictingSourceIds": [
+            "src_northstar_health_product_scope_2026_05_18"
+          ],
+          "safeAlternative": "Admin audit logs are included for configured workflow actions; export scope can be reviewed separately."
+        },
+        {
+          "claimId": "claim_003",
+          "text": "We can start processing workflow data before the paperwork is fully complete.",
+          "reason": "The MSA excerpt prohibits processing patient-adjacent workflow data before BAA execution.",
+          "conflictingSourceIds": [
+            "src_northstar_health_msa_2026_05_22"
+          ],
+          "safeAlternative": "Workflow data processing will begin after the BAA is mutually executed."
+        }
+      ]
+    }
+  ]
+}

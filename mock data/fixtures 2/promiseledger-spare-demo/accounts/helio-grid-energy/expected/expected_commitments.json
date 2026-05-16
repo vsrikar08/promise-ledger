@@ -1,0 +1,344 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_helio_grid_energy",
+  "commitments": [
+    {
+      "commitmentId": "com_helio_grid_energy_operator_approval_workflow",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Configure an operator approval workflow for pilot recommendations before the May 29 tabletop exercise.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_priya_shah",
+      "ownerPersonId": "person_helio_grid_energy_lina_ortiz",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-29",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "The approval queue is tied to the customer's tabletop exercise.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_operator_approval",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "src_helio_grid_energy_onboarding_plan_2026_05_25"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L015 00:07:43",
+          "quote": "We can configure an operator approval queue for recommendations before the May 29 tabletop exercise."
+        },
+        {
+          "sourceId": "src_helio_grid_energy_onboarding_plan_2026_05_25",
+          "locator": "milestone ms_helio_operator_queue sourceText",
+          "quote": "Configure operator approval queue for recommendations before the May 29 tabletop exercise."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_simulation_kickoff_may_27",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Begin kickoff and simulation workspace setup on 2026-05-27.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_maya_torres",
+      "ownerPersonId": "person_helio_grid_energy_lina_ortiz",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-27",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "Supported pilot scope with an owner and date.",
+      "confidence": 0.91,
+      "linkedProductAreaId": "prod_grid_simulation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_proposal_2026_05_18"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_proposal_2026_05_18",
+          "locator": "Timeline",
+          "quote": "Kickoff and simulation workspace setup begin on 2026-05-27."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_safety_packet_may_20",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Send the grid safety review packet by Wednesday, May 20.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_priya_shah",
+      "ownerPersonId": "person_helio_grid_energy_nora_bell",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-20",
+      "status": "fulfilled",
+      "risk": "low",
+      "riskReason": "The risk review states that the packet is available for delivery.",
+      "confidence": 0.95,
+      "linkedProductAreaId": "prod_safety_boundary",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "src_helio_grid_energy_risk_review_2026_05_19"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L011 00:05:30",
+          "quote": "We will send the grid safety review packet by Wednesday, May 20."
+        },
+        {
+          "sourceId": "src_helio_grid_energy_risk_review_2026_05_19",
+          "locator": "Documents Available",
+          "quote": "Safety review packet is available for customer delivery on 2026-05-20."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_customer_sends_dispatch_rules",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "HelioGrid will send redacted dispatch rules and two sample event logs by 2026-05-22.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_helio_grid_energy_felix_nouri",
+      "promisedToPersonId": "person_helio_grid_energy_rowan_pike",
+      "ownerPersonId": "person_helio_grid_energy_felix_nouri",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-22",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Simulation workspace setup depends on customer-provided data.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_grid_simulation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "src_helio_grid_energy_email_2026_05_17_pilot_followup"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L013 00:06:41",
+          "quote": "HelioGrid will send the redacted dispatch rules and two sample event logs by Friday, May 22."
+        },
+        {
+          "sourceId": "src_helio_grid_energy_email_2026_05_17_pilot_followup",
+          "locator": "email_pilot_followup_002",
+          "quote": "HelioGrid will send the redacted dispatch rules and two sample event logs by Friday, May 22."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_customer_ask_live_dispatch",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Customer asked whether automatic dispatch can occur during a live grid event in the pilot.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_maya_torres",
+      "promisedToPersonId": "person_helio_grid_energy_rowan_pike",
+      "ownerPersonId": "person_helio_grid_energy_rowan_pike",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-19",
+      "status": "needs_review",
+      "risk": "high",
+      "riskReason": "The answer affects safety, compliance, and final SOW language.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_live_automation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L006 00:02:51",
+          "quote": "Can PromiseLedger automatically dispatch actions during a live grid event if the recommendation confidence is high?"
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_ae_implied_live_dispatch",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "AE implied live grid-dispatch automation could be enabled during the pilot if safety review looked clean.",
+      "type": "unsupported_claim",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_maya_torres",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-19",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Product and policy boundaries prohibit live grid-dispatch automation during pilot mode.",
+      "confidence": 0.89,
+      "linkedProductAreaId": "prod_live_automation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "src_helio_grid_energy_policy_boundaries_2026_05_18"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L008 00:03:47",
+          "quote": "If the safety review looks clean, we should be able to let the workflow dispatch automatically during the pilot window."
+        },
+        {
+          "sourceId": "src_helio_grid_energy_policy_boundaries_2026_05_18",
+          "locator": "cap_pilot_safety_boundary internalNotes",
+          "quote": "No live control-plane actions or automatic grid dispatch may be enabled during any pilot."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_no_live_control_plane",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "The pilot is simulation-only and excludes live control-plane actions, automatic dispatch, and grid-affecting external actions.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_priya_shah",
+      "ownerPersonId": "person_helio_grid_energy_theo_grant",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-24",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "This safety boundary must constrain customer-facing language and implementation behavior.",
+      "confidence": 0.97,
+      "linkedProductAreaId": "prod_safety_boundary",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_sow_2026_05_24"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_sow_2026_05_24",
+          "locator": "Exclusions",
+          "quote": "No live control-plane actions, automatic dispatch, or grid-affecting external actions are authorized under this SOW."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_audit_logs_by_june_3",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Provide an audit log export for operator decisions by June 3.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_priya_shah",
+      "ownerPersonId": "person_helio_grid_energy_lina_ortiz",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-03",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "Supported deliverable with clear date and implementation owner.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_operator_approval",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+        "src_helio_grid_energy_proposal_2026_05_18"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L017 00:08:58",
+          "quote": "We can provide an audit log export for operator decisions by June 3."
+        },
+        {
+          "sourceId": "src_helio_grid_energy_proposal_2026_05_18",
+          "locator": "Timeline",
+          "quote": "Audit log export available by 2026-06-03."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_internal_confirm_policy",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Confirm the live-dispatch boundary with Product and Safety by May 20.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_helio_grid_energy_rowan_pike",
+      "promisedToPersonId": "person_helio_grid_energy_lina_ortiz",
+      "ownerPersonId": "person_helio_grid_energy_theo_grant",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-20",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "The answer must resolve customer-facing language before SOW finalization.",
+      "confidence": 0.88,
+      "linkedProductAreaId": "prod_live_automation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff",
+          "locator": "slack_msg_helio_grid_energy_sales_engineering_handoff_005",
+          "quote": "Rowan will confirm the live-dispatch boundary with Product and Safety by May 20."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_missing_owner_dispatch_api",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Review dispatch API wording before customer follow-up, but no owner is assigned.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_helio_grid_energy_lina_ortiz",
+      "promisedToPersonId": "person_helio_grid_energy_theo_grant",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-20",
+      "status": "needs_review",
+      "risk": "medium",
+      "riskReason": "The task is unresolved and customer-facing wording could drift without an owner.",
+      "confidence": 0.87,
+      "linkedProductAreaId": "prod_live_automation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff",
+          "locator": "slack_msg_helio_grid_energy_sales_engineering_handoff_003",
+          "quote": "No owner yet for checking the dispatch API wording."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_helio_grid_energy_customer_expectation_replayed_event",
+      "accountId": "acct_helio_grid_energy",
+      "dealId": "deal_helio_grid_energy_regulated_pilot",
+      "normalizedText": "Keep the first tabletop to replayed events while preserving the same operator approval steps.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_helio_grid_energy_maya_torres",
+      "promisedToPersonId": "person_helio_grid_energy_rowan_pike",
+      "ownerPersonId": "person_helio_grid_energy_lina_ortiz",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-29",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "The tabletop design must match the customer's approval-step expectation.",
+      "confidence": 0.84,
+      "linkedProductAreaId": "prod_grid_simulation",
+      "linkedSourceIds": [
+        "src_helio_grid_energy_call_2026_05_17_pilot_scope"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+          "locator": "L018 00:09:31",
+          "quote": "A replayed event is fine for the first tabletop as long as the operators see the same approval steps."
+        }
+      ]
+    }
+  ]
+}

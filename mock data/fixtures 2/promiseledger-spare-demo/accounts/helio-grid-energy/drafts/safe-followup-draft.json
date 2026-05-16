@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_helio_grid_energy_safe_followup",
+  "accountId": "acct_helio_grid_energy",
+  "dealId": "deal_helio_grid_energy_regulated_pilot",
+  "authorPersonId": "person_helio_grid_energy_rowan_pike",
+  "createdAt": "2026-05-17T19:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "HelioGrid pilot scope confirmation",
+  "bodyMarkdown": "Hi Maya,\n\nDuring the pilot, we can simulate grid-dispatch workflows and route recommendations for operator approval before any live automation is considered. We will send the grid safety review packet by Wednesday, May 20, and we will keep the May 29 tabletop focused on replayed events and operator approval evidence.\n\nBest,\nRowan",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "During the pilot, we can simulate grid-dispatch workflows and route recommendations for operator approval before any live automation is considered.",
+      "claimType": "safety_boundary",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We will send the grid safety review packet by Wednesday, May 20.",
+      "claimType": "implementation",
+      "shouldBeAllowed": true
+    }
+  ]
+}

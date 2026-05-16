@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_acme_robotics",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 5,
+    "highRiskCommitmentCount": 4,
+    "missingOwnerCount": 3,
+    "dueThisWeekCount": 6,
+    "contradictionCount": 2,
+    "nextCriticalDate": "2026-05-19"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_acme_robotics_security_packet_by_friday",
+      "com_acme_robotics_confirm_netsuite_scope",
+      "com_acme_robotics_netsuite_customer_ask",
+      "com_acme_robotics_no_live_external_emails",
+      "com_acme_robotics_dashboard_plan"
+    ],
+    "whatTheyOweUs": [
+      "com_acme_robotics_field_map_by_may_19",
+      "com_acme_robotics_procurement_checklist_by_may_20"
+    ],
+    "riskyCommitments": [
+      "com_acme_robotics_confirm_netsuite_scope",
+      "com_acme_robotics_netsuite_unsupported_claim",
+      "com_acme_robotics_dashboard_plan",
+      "com_acme_robotics_netsuite_scope_contradiction"
+    ],
+    "contradictions": [
+      "contra_acme_robotics_netsuite_support",
+      "contra_acme_robotics_dashboard_owner"
+    ],
+    "dueThisWeek": [
+      "com_acme_robotics_security_packet_by_friday",
+      "com_acme_robotics_confirm_netsuite_scope",
+      "com_acme_robotics_netsuite_customer_ask",
+      "com_acme_robotics_netsuite_unsupported_claim",
+      "com_acme_robotics_field_map_by_may_19",
+      "com_acme_robotics_procurement_checklist_by_may_20"
+    ],
+    "noOwnerPromises": [
+      "com_acme_robotics_netsuite_unsupported_claim",
+      "com_acme_robotics_dashboard_plan",
+      "com_acme_robotics_netsuite_scope_contradiction"
+    ],
+    "sourceTimeline": [
+      "src_acme_robotics_call_2026_05_16_demo",
+      "src_acme_robotics_email_2026_05_16_followup_thread",
+      "src_acme_robotics_slack_2026_05_16_internal_handoff",
+      "src_acme_robotics_slack_2026_05_16_product_review_thread",
+      "src_acme_robotics_product_scope_2026_05_16",
+      "src_acme_robotics_proposal_2026_05_16",
+      "src_acme_robotics_sow_2026_05_20",
+      "src_acme_robotics_onboarding_plan_2026_05_21"
+    ]
+  }
+}

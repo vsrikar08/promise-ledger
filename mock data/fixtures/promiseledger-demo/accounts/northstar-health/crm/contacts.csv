@@ -1,0 +1,10 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_northstar_health_renee_cole,acct_northstar_health,Renee Cole,VP Operations,renee.cole@northstarhealth.example,champion,decision_maker,executive,true,false
+person_northstar_health_victor_han,acct_northstar_health,Victor Han,Procurement Manager,victor.han@northstarhealth.example,procurement,blocker,manager,true,false
+person_northstar_health_dana_ortiz,acct_northstar_health,Dana Ortiz,Counsel,dana.ortiz@northstarhealth.example,legal,blocker,manager,true,false
+person_northstar_health_priya_shah,acct_northstar_health,Priya Shah,Security Lead,priya.shah@northstarhealth.example,technical_evaluator,influencer,manager,true,false
+person_northstar_health_maya_chen,acct_northstar_health,Maya Chen,Account Executive,maya.chen@promiseledger.example,account_owner,influencer,manager,false,true
+person_northstar_health_omar_patel,acct_northstar_health,Omar Patel,Security Engineer,omar.patel@promiseledger.example,security,influencer,ic,false,true
+person_northstar_health_grace_wu,acct_northstar_health,Grace Wu,Legal Counsel,grace.wu@promiseledger.example,legal,influencer,manager,false,true
+person_northstar_health_leo_grant,acct_northstar_health,Leo Grant,Implementation Lead,leo.grant@promiseledger.example,implementation,influencer,manager,false,true
+person_northstar_health_hanna_li,acct_northstar_health,Hanna Li,CSM,hanna.li@promiseledger.example,cs_owner,influencer,manager,false,true

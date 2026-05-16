@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_ridgeway_university_safe_followup",
+  "accountId": "acct_ridgeway_university",
+  "dealId": "deal_ridgeway_university_student_services_onboarding",
+  "authorPersonId": "person_ridgeway_university_sierra_patton",
+  "createdAt": "2026-05-22T16:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Ridgeway onboarding privacy confirmation",
+  "bodyMarkdown": "Hi Hannah,\n\nWe can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation are complete. SSO can proceed with test users and sandbox data, and we will return the security questionnaire response by May 29.\n\nBest,\nSierra",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation are complete.",
+      "claimType": "privacy",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "SSO can proceed with test users and sandbox data.",
+      "claimType": "implementation",
+      "shouldBeAllowed": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_cedar_slate_retail",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 10,
+    "highRiskCommitmentCount": 5,
+    "missingOwnerCount": 2,
+    "dueThisWeekCount": 6,
+    "contradictionCount": 3,
+    "nextCriticalDate": "2026-06-10"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_cedar_slate_retail_daily_inventory_batch_june_2",
+      "com_cedar_slate_retail_executive_dashboard_june_5",
+      "com_cedar_slate_retail_realtime_reconciliation_soft",
+      "com_cedar_slate_retail_customer_ask_realtime_before_launch",
+      "com_cedar_slate_retail_payment_token_excluded",
+      "com_cedar_slate_retail_support_mapping_update_may_23",
+      "com_cedar_slate_retail_inventory_blocker_store_014"
+    ],
+    "whatTheyOweUs": [
+      "com_cedar_slate_retail_customer_pos_map_credentials"
+    ],
+    "riskyCommitments": [
+      "com_cedar_slate_retail_realtime_reconciliation_soft",
+      "com_cedar_slate_retail_customer_ask_realtime_before_launch",
+      "com_cedar_slate_retail_confirm_payment_token_scope",
+      "com_cedar_slate_retail_payment_token_excluded",
+      "com_cedar_slate_retail_inventory_blocker_store_014"
+    ],
+    "contradictions": [
+      "contra_cedar_slate_retail_realtime_payment_scope",
+      "contra_cedar_slate_retail_token_handling",
+      "contra_cedar_slate_retail_support_sla_mapping"
+    ],
+    "dueThisWeek": [
+      "com_cedar_slate_retail_customer_pos_map_credentials",
+      "com_cedar_slate_retail_customer_ask_realtime_before_launch",
+      "com_cedar_slate_retail_confirm_payment_token_scope",
+      "com_cedar_slate_retail_payment_token_excluded",
+      "com_cedar_slate_retail_payment_reconciliation_missing_owner",
+      "com_cedar_slate_retail_support_mapping_update_may_23"
+    ],
+    "noOwnerPromises": [
+      "com_cedar_slate_retail_realtime_reconciliation_soft",
+      "com_cedar_slate_retail_payment_reconciliation_missing_owner"
+    ],
+    "sourceTimeline": [
+      "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+      "src_cedar_slate_retail_email_2026_05_19_launch_planning",
+      "src_cedar_slate_retail_proposal_2026_05_20",
+      "src_cedar_slate_retail_slack_2026_05_20_implementation_handoff",
+      "src_cedar_slate_retail_slack_2026_05_21_payments_risk",
+      "src_cedar_slate_retail_product_scope_2026_05_20",
+      "src_cedar_slate_retail_integration_support_matrix_2026_05_21",
+      "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+      "src_cedar_slate_retail_order_form_2026_05_26",
+      "src_cedar_slate_retail_sow_2026_05_26",
+      "src_cedar_slate_retail_onboarding_plan_2026_05_27"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_acme_robotics_jane_park,acct_acme_robotics,Jane Park,VP Operations,jane.park@acmerobotics.example,champion,decision_maker,executive,true,false
+person_acme_robotics_miguel_santos,acct_acme_robotics,Miguel Santos,IT Director,miguel.santos@acmerobotics.example,technical_evaluator,influencer,manager,true,false
+person_acme_robotics_erin_blake,acct_acme_robotics,Erin Blake,Procurement Lead,erin.blake@acmerobotics.example,procurement,blocker,manager,true,false
+person_acme_robotics_tara_ng,acct_acme_robotics,Tara Ng,CFO,tara.ng@acmerobotics.example,economic_buyer,decision_maker,executive,true,false
+person_acme_robotics_alex_rivera,acct_acme_robotics,Alex Rivera,Account Executive,alex.rivera@promiseledger.example,account_owner,influencer,manager,false,true
+person_acme_robotics_priya_menon,acct_acme_robotics,Priya Menon,Solutions Engineer,priya.menon@promiseledger.example,technical_evaluator,influencer,ic,false,true
+person_acme_robotics_sam_kim,acct_acme_robotics,Sam Kim,CSM,sam.kim@promiseledger.example,cs_owner,influencer,manager,false,true
+person_acme_robotics_nora_chen,acct_acme_robotics,Nora Chen,Product Manager,nora.chen@promiseledger.example,product,influencer,manager,false,true
+person_acme_robotics_lee_ortiz,acct_acme_robotics,Lee Ortiz,Security Analyst,lee.ortiz@promiseledger.example,security,influencer,ic,false,true

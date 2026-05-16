@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_helio_grid_energy",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 10,
+    "highRiskCommitmentCount": 4,
+    "missingOwnerCount": 2,
+    "dueThisWeekCount": 5,
+    "contradictionCount": 2,
+    "nextCriticalDate": "2026-05-19"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_helio_grid_energy_operator_approval_workflow",
+      "com_helio_grid_energy_simulation_kickoff_may_27",
+      "com_helio_grid_energy_safety_packet_may_20",
+      "com_helio_grid_energy_customer_ask_live_dispatch",
+      "com_helio_grid_energy_ae_implied_live_dispatch",
+      "com_helio_grid_energy_no_live_control_plane",
+      "com_helio_grid_energy_audit_logs_by_june_3",
+      "com_helio_grid_energy_customer_expectation_replayed_event"
+    ],
+    "whatTheyOweUs": [
+      "com_helio_grid_energy_customer_sends_dispatch_rules"
+    ],
+    "riskyCommitments": [
+      "com_helio_grid_energy_customer_ask_live_dispatch",
+      "com_helio_grid_energy_ae_implied_live_dispatch",
+      "com_helio_grid_energy_no_live_control_plane",
+      "com_helio_grid_energy_internal_confirm_policy"
+    ],
+    "contradictions": [
+      "contra_helio_grid_energy_live_dispatch_policy",
+      "contra_helio_grid_energy_call_vs_proposal_scope"
+    ],
+    "dueThisWeek": [
+      "com_helio_grid_energy_customer_sends_dispatch_rules",
+      "com_helio_grid_energy_customer_ask_live_dispatch",
+      "com_helio_grid_energy_ae_implied_live_dispatch",
+      "com_helio_grid_energy_internal_confirm_policy",
+      "com_helio_grid_energy_missing_owner_dispatch_api"
+    ],
+    "noOwnerPromises": [
+      "com_helio_grid_energy_ae_implied_live_dispatch",
+      "com_helio_grid_energy_missing_owner_dispatch_api"
+    ],
+    "sourceTimeline": [
+      "src_helio_grid_energy_call_2026_05_17_pilot_scope",
+      "src_helio_grid_energy_email_2026_05_17_pilot_followup",
+      "src_helio_grid_energy_slack_2026_05_17_sales_engineering_handoff",
+      "src_helio_grid_energy_product_scope_2026_05_17",
+      "src_helio_grid_energy_proposal_2026_05_18",
+      "src_helio_grid_energy_policy_boundaries_2026_05_18",
+      "src_helio_grid_energy_risk_review_2026_05_19",
+      "src_helio_grid_energy_sow_2026_05_24",
+      "src_helio_grid_energy_onboarding_plan_2026_05_25"
+    ]
+  }
+}

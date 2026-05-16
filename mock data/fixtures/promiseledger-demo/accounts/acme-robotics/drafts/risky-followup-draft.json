@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_acme_robotics_risky_followup",
+  "accountId": "acct_acme_robotics",
+  "dealId": "deal_acme_robotics_ai_workflow_pilot",
+  "authorPersonId": "person_acme_robotics_alex_rivera",
+  "createdAt": "2026-05-16T19:05:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Acme pilot confirmation",
+  "bodyMarkdown": "Hi Jane,\n\nNetSuite is definitely supported for the pilot. We will also deliver a production renewal dashboard before your June 12 QBR and can enable live external emails during the pilot.\n\nBest,\nAlex",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "NetSuite is definitely supported for the pilot.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We will also deliver a production renewal dashboard before your June 12 QBR.",
+      "claimType": "implementation",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_003",
+      "text": "We can enable live external emails during the pilot.",
+      "claimType": "implementation",
+      "shouldBeAllowed": false
+    }
+  ]
+}

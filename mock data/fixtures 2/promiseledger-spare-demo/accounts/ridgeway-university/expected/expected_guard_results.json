@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_ridgeway_university",
+  "guardCases": [
+    {
+      "draftId": "draft_ridgeway_university_safe_followup",
+      "expectedDecision": "allow",
+      "risk": "low",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_ridgeway_university_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "We can start processing production student roster data next week before the DPA is finalized.",
+          "reason": "Production roster processing cannot begin until DPA approval and sandbox validation are complete.",
+          "conflictingSourceIds": [
+            "src_ridgeway_university_dpa_excerpt_2026_05_28",
+            "src_ridgeway_university_privacy_review_2026_05_23",
+            "src_ridgeway_university_product_scope_2026_05_22"
+          ],
+          "safeAlternative": "We can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation are complete."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "Send the production CSV on Tuesday and we will use it to accelerate onboarding before sandbox validation is complete.",
+          "reason": "Before DPA approval, PromiseLedger may process sandbox data only.",
+          "conflictingSourceIds": [
+            "src_ridgeway_university_dpa_excerpt_2026_05_28",
+            "src_ridgeway_university_sow_2026_05_28"
+          ],
+          "safeAlternative": "Please send the sandbox roster by May 27 so sandbox onboarding can proceed while DPA approval is completed."
+        }
+      ]
+    }
+  ]
+}

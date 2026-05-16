@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_ridgeway_university",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 10,
+    "highRiskCommitmentCount": 5,
+    "missingOwnerCount": 2,
+    "dueThisWeekCount": 7,
+    "contradictionCount": 3,
+    "nextCriticalDate": "2026-05-22"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_ridgeway_university_sandbox_onboarding_next_week",
+      "com_ridgeway_university_ae_implied_prod_roster_next_week",
+      "com_ridgeway_university_dpa_before_prod_processing",
+      "com_ridgeway_university_customer_ask_prod_roster_before_dpa",
+      "com_ridgeway_university_sso_metadata_june_5",
+      "com_ridgeway_university_security_questionnaire_may_29",
+      "com_ridgeway_university_sandbox_only_privacy_boundary"
+    ],
+    "whatTheyOweUs": [
+      "com_ridgeway_university_customer_sandbox_roster_may_27",
+      "com_ridgeway_university_onboarding_plan_blocked_sandbox_roster"
+    ],
+    "riskyCommitments": [
+      "com_ridgeway_university_ae_implied_prod_roster_next_week",
+      "com_ridgeway_university_dpa_before_prod_processing",
+      "com_ridgeway_university_customer_ask_prod_roster_before_dpa",
+      "com_ridgeway_university_missing_owner_prod_import_path",
+      "com_ridgeway_university_sandbox_only_privacy_boundary"
+    ],
+    "contradictions": [
+      "contra_ridgeway_university_prod_roster_before_dpa",
+      "contra_ridgeway_university_call_vs_proposal_sandbox_scope",
+      "contra_ridgeway_university_roster_dependency"
+    ],
+    "dueThisWeek": [
+      "com_ridgeway_university_ae_implied_prod_roster_next_week",
+      "com_ridgeway_university_customer_sandbox_roster_may_27",
+      "com_ridgeway_university_customer_ask_prod_roster_before_dpa",
+      "com_ridgeway_university_security_questionnaire_may_29",
+      "com_ridgeway_university_missing_owner_prod_import_path",
+      "com_ridgeway_university_sandbox_only_privacy_boundary",
+      "com_ridgeway_university_onboarding_plan_blocked_sandbox_roster"
+    ],
+    "noOwnerPromises": [
+      "com_ridgeway_university_ae_implied_prod_roster_next_week",
+      "com_ridgeway_university_missing_owner_prod_import_path"
+    ],
+    "sourceTimeline": [
+      "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+      "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+      "src_ridgeway_university_proposal_2026_05_22",
+      "src_ridgeway_university_slack_2026_05_22_legal_security",
+      "src_ridgeway_university_slack_2026_05_22_cs_handoff",
+      "src_ridgeway_university_product_scope_2026_05_22",
+      "src_ridgeway_university_privacy_review_2026_05_23",
+      "src_ridgeway_university_procurement_checklist_2026_05_24",
+      "src_ridgeway_university_sow_2026_05_28",
+      "src_ridgeway_university_dpa_excerpt_2026_05_28",
+      "src_ridgeway_university_onboarding_plan_2026_05_29"
+    ]
+  }
+}

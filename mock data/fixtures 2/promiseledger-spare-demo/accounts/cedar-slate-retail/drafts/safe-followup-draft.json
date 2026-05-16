@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_cedar_slate_retail_safe_followup",
+  "accountId": "acct_cedar_slate_retail",
+  "dealId": "deal_cedar_slate_retail_expansion_launch",
+  "authorPersonId": "person_cedar_slate_retail_mira_chen",
+  "createdAt": "2026-05-21T16:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Cedar & Slate launch scope confirmation",
+  "bodyMarkdown": "Hi Elise,\n\nWe can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product review. Daily inventory batch sync remains targeted for June 2, and the executive launch readiness dashboard is targeted for June 5.\n\nBest,\nMira",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product review.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "Daily inventory batch sync remains targeted for June 2.",
+      "claimType": "timeline",
+      "shouldBeAllowed": true
+    }
+  ]
+}

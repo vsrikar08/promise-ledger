@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_titan_logistics_risky_followup",
+  "accountId": "acct_titan_logistics",
+  "dealId": "deal_titan_logistics_renewal",
+  "authorPersonId": "person_titan_logistics_jordan_miles",
+  "createdAt": "2026-05-20T19:08:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Guaranteed routing dashboard fix",
+  "bodyMarkdown": "Hi Logan,\n\nWe guarantee the routing dashboard issue will be fully resolved by Monday under your SLA. The order form already includes a Monday full-resolution SLA, and Product has assigned an owner for the fix.\n\nBest,\nJordan",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We guarantee the routing dashboard issue will be fully resolved by Monday under your SLA.",
+      "claimType": "support_sla",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_002",
+      "text": "The order form already includes a Monday full-resolution SLA.",
+      "claimType": "legal",
+      "shouldBeAllowed": false
+    },
+    {
+      "claimId": "claim_003",
+      "text": "Product has assigned an owner for the fix.",
+      "claimType": "implementation",
+      "shouldBeAllowed": false
+    }
+  ]
+}

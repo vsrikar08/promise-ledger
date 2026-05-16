@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_cedar_slate_retail",
+  "accountSlug": "cedar-slate-retail",
+  "accountName": "Cedar & Slate Retail",
+  "industry": "retail and ecommerce operations",
+  "scenarioType": "retail_expansion",
+  "fixtureIntent": {
+    "primaryDemoMoment": "payment_data_scope_mismatch",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_cedar_slate_retail_crm_account_2026_05_18",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-18",
+      "system": "hubspot",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_elise_morgan",
+        "person_cedar_slate_retail_omar_linden",
+        "person_cedar_slate_retail_talia_chen",
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_ivy_kapoor",
+        "person_cedar_slate_retail_jules_park"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_crm_contacts_2026_05_18",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-18",
+      "system": "hubspot",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_elise_morgan",
+        "person_cedar_slate_retail_omar_linden",
+        "person_cedar_slate_retail_talia_chen",
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_ivy_kapoor",
+        "person_cedar_slate_retail_jules_park"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_crm_opportunity_2026_05_18",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-18",
+      "system": "hubspot",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_elise_morgan"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_crm_tasks_2026_05_18",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-18",
+      "system": "hubspot",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_ivy_kapoor",
+        "person_cedar_slate_retail_jules_park"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+      "path": "calls/2026-05-19__expansion-demo-call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-19",
+      "system": "zoom",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_elise_morgan",
+        "person_cedar_slate_retail_omar_linden",
+        "person_cedar_slate_retail_talia_chen",
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_email_2026_05_19_launch_planning",
+      "path": "emails/2026-05-19__launch-planning-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-19",
+      "system": "gmail",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_elise_morgan",
+        "person_cedar_slate_retail_omar_linden",
+        "person_cedar_slate_retail_talia_chen",
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_proposal_2026_05_20",
+      "path": "proposals/2026-05-20__expansion-proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-20",
+      "system": "google_docs",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_order_form_2026_05_26",
+      "path": "contracts/2026-05-26__order-form.md",
+      "sourceType": "order_form",
+      "date": "2026-05-26",
+      "system": "google_docs",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_elise_morgan",
+        "person_cedar_slate_retail_mira_chen"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_sow_2026_05_26",
+      "path": "contracts/2026-05-26__sow.md",
+      "sourceType": "sow",
+      "date": "2026-05-26",
+      "system": "google_docs",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_talia_chen",
+        "person_cedar_slate_retail_ivy_kapoor",
+        "person_cedar_slate_retail_mira_chen"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_slack_2026_05_20_implementation_handoff",
+      "path": "slack/2026-05-20__implementation-handoff.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-20",
+      "system": "slack",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_ivy_kapoor"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_slack_2026_05_21_payments_risk",
+      "path": "slack/2026-05-21__payments-risk-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-21",
+      "system": "slack",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_mira_chen",
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_ivy_kapoor"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_product_scope_2026_05_20",
+      "path": "product/product-scope.yml",
+      "sourceType": "product_scope",
+      "date": "2026-05-20",
+      "system": "notion",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_ivy_kapoor"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_integration_support_matrix_2026_05_21",
+      "path": "product/integration-support-matrix.yml",
+      "sourceType": "integration_support_matrix",
+      "date": "2026-05-21",
+      "system": "notion",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_ivy_kapoor"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+      "path": "support/2026-05-21__inventory-sync-ticket.jsonl",
+      "sourceType": "support_ticket",
+      "date": "2026-05-21",
+      "system": "zendesk",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_omar_linden",
+        "person_cedar_slate_retail_jules_park",
+        "person_cedar_slate_retail_diego_santos"
+      ]
+    },
+    {
+      "sourceId": "src_cedar_slate_retail_onboarding_plan_2026_05_27",
+      "path": "onboarding/2026-05-27__launch-plan.yml",
+      "sourceType": "onboarding_plan",
+      "date": "2026-05-27",
+      "system": "google_docs",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "participants": [
+        "person_cedar_slate_retail_diego_santos",
+        "person_cedar_slate_retail_elise_morgan"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true,
+    "doNotMakeEveryContradictionObvious": true
+  }
+}

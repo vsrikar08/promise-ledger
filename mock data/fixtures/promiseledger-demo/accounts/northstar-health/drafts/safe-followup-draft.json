@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_northstar_health_safe_followup",
+  "accountId": "acct_northstar_health",
+  "dealId": "deal_northstar_health_regulated_workflow_deployment",
+  "authorPersonId": "person_northstar_health_omar_patel",
+  "createdAt": "2026-05-18T19:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Northstar security materials and onboarding timing",
+  "bodyMarkdown": "Hi Renee and Victor,\n\nWe’ll send the approved security materials now and confirm BAA timing before finalizing the kickoff date.\n\nWe will include admin audit logs for configured workflow actions in the deployment scope. Victor, once you send the procurement portal link by Tuesday, May 19, our team will upload the approved packet and track any remaining items.\n\nWe will also align the kickoff date to the SOW once security approval, BAA execution, and PO are complete.\n\nBest,\nOmar",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We’ll send the approved security materials now and confirm BAA timing before finalizing the kickoff date.",
+      "claimType": "security",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "We will include admin audit logs for configured workflow actions in the deployment scope.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_003",
+      "text": "We will also align the kickoff date to the SOW once security approval, BAA execution, and PO are complete.",
+      "claimType": "timeline",
+      "shouldBeAllowed": true
+    }
+  ]
+}

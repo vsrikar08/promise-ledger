@@ -1,0 +1,2 @@
+account_id,account_name,domain,industry,segment,arr,region,account_owner_id,cs_owner_id,health,status,next_renewal_date,notes
+acct_cedar_slate_retail,Cedar & Slate Retail,cedarslate.example,retail and ecommerce operations,mid_market,180000,NA-East,person_cedar_slate_retail_mira_chen,person_cedar_slate_retail_diego_santos,yellow,customer,2027-06-10,"Expansion launch depends on inventory sync, payment reconciliation, POS mapping, and launch-readiness reporting."

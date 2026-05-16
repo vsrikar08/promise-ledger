@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_northstar_health",
+  "summary": {
+    "promiseDebtLevel": "critical",
+    "openCommitmentCount": 6,
+    "highRiskCommitmentCount": 5,
+    "missingOwnerCount": 3,
+    "dueThisWeekCount": 6,
+    "contradictionCount": 2,
+    "nextCriticalDate": "2026-05-19"
+  },
+  "sections": {
+    "whatWeOweThem": [
+      "com_northstar_health_security_packet_customer_ask",
+      "com_northstar_health_security_packet_by_friday",
+      "com_northstar_health_onboarding_7_day_expectation",
+      "com_northstar_health_admin_audit_logs_included",
+      "com_northstar_health_sow_15_business_days"
+    ],
+    "whatTheyOweUs": [
+      "com_northstar_health_procurement_portal_by_may_19",
+      "com_northstar_health_legal_redlines_by_may_20",
+      "com_northstar_health_procurement_approval_by_may_27"
+    ],
+    "riskyCommitments": [
+      "com_northstar_health_confirm_baa_timing",
+      "com_northstar_health_onboarding_7_day_expectation",
+      "com_northstar_health_baa_not_approved",
+      "com_northstar_health_sow_15_business_days",
+      "com_northstar_health_timeline_contradiction"
+    ],
+    "contradictions": [
+      "contra_northstar_health_onboarding_timeline",
+      "contra_northstar_health_security_packet_scope"
+    ],
+    "dueThisWeek": [
+      "com_northstar_health_security_packet_customer_ask",
+      "com_northstar_health_security_packet_by_friday",
+      "com_northstar_health_onboarding_7_day_expectation",
+      "com_northstar_health_procurement_portal_by_may_19",
+      "com_northstar_health_legal_redlines_by_may_20",
+      "com_northstar_health_portal_upload_owner"
+    ],
+    "noOwnerPromises": [
+      "com_northstar_health_baa_not_approved",
+      "com_northstar_health_portal_upload_owner",
+      "com_northstar_health_timeline_contradiction"
+    ],
+    "sourceTimeline": [
+      "src_northstar_health_call_2026_05_18_security_review",
+      "src_northstar_health_email_2026_05_18_procurement_thread",
+      "src_northstar_health_slack_2026_05_18_legal_security_thread",
+      "src_northstar_health_security_review_2026_05_19",
+      "src_northstar_health_legal_redlines_2026_05_20",
+      "src_northstar_health_sow_2026_05_22",
+      "src_northstar_health_msa_2026_05_22",
+      "src_northstar_health_onboarding_plan_2026_05_23"
+    ]
+  }
+}

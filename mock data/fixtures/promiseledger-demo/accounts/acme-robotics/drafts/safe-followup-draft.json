@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "draftId": "draft_acme_robotics_safe_followup",
+  "accountId": "acct_acme_robotics",
+  "dealId": "deal_acme_robotics_ai_workflow_pilot",
+  "authorPersonId": "person_acme_robotics_alex_rivera",
+  "createdAt": "2026-05-16T19:00:00-07:00",
+  "channel": "email",
+  "audience": "customer",
+  "subject": "Acme pilot next steps",
+  "bodyMarkdown": "Hi Jane,\n\nI’ll send the security packet by Friday, May 22. We’ll confirm the NetSuite integration scope with product before adding it to the pilot plan. Live external emails will remain disabled unless Acme approves a separate go-live step.\n\nBest,\nAlex",
+  "intendedClaims": [
+    {
+      "claimId": "claim_001",
+      "text": "We’ll confirm the NetSuite integration scope with product before adding it to the pilot plan.",
+      "claimType": "feature_support",
+      "shouldBeAllowed": true
+    },
+    {
+      "claimId": "claim_002",
+      "text": "Live external emails will remain disabled unless Acme approves a separate go-live step.",
+      "claimType": "implementation",
+      "shouldBeAllowed": true
+    }
+  ]
+}

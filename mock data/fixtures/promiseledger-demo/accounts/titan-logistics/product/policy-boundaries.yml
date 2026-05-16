@@ -1,0 +1,49 @@
+schemaVersion: "0.1"
+sourceId: "src_titan_logistics_policy_boundaries_2026_05_20"
+sourceType: "policy_boundaries"
+accountId: "acct_titan_logistics"
+createdAt: "2026-05-20T12:00:00-07:00"
+ownerTeam: "Support"
+visibility: "product"
+reliability: "authoritative"
+
+capabilities:
+  - capabilityId: "cap_support_targets"
+    name: "Support Target Language"
+    productAreaId: "prod_support"
+    status: "generally_available"
+    customerFacingDescription: "Support may provide acknowledgement targets and factual escalation updates."
+    internalNotes: "Do not describe support targets as guaranteed resolution SLAs unless a signed agreement says so."
+    allowedInPilot: true
+    requiresApproval: false
+    approvalOwnerPersonId: "person_titan_logistics_priya_nair"
+    supportedIntegrations: ["support_queue", "status_update"]
+    unsupportedIntegrations: ["guaranteed_resolution_sla"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "Urgent case acknowledgement is targeted within four business hours."
+        - "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday."
+      blockedClaims:
+        - "We guarantee the routing dashboard issue will be fully resolved by Monday under your SLA."
+        - "A Monday full-resolution SLA is included in Titan's current order form."
+      safeAlternativeWording:
+        - "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday."
+
+  - capabilityId: "cap_routing_dashboard"
+    name: "Routing Dashboard Aggregation"
+    productAreaId: "prod_routing_dashboard"
+    status: "generally_available"
+    customerFacingDescription: "Configured fleets can view routing dashboards and exception summaries."
+    internalNotes: "Aggregation failures require Product review; support cannot guarantee a resolution date before root cause confirmation."
+    allowedInPilot: true
+    requiresApproval: true
+    approvalOwnerPersonId: "person_titan_logistics_tessa_brooks"
+    supportedIntegrations: ["route_aggregation", "dispatch_exception_summary"]
+    unsupportedIntegrations: ["unapproved_carrier_eta_variance_dashboard"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "The routing dashboard issue has been escalated for Product review."
+      blockedClaims:
+        - "The dashboard will be fully fixed by Monday regardless of root cause."
+      safeAlternativeWording:
+        - "We will provide a resolution plan after Product confirms root cause."

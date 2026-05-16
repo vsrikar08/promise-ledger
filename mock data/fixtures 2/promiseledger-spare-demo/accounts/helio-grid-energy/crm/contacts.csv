@@ -1,0 +1,8 @@
+person_id,account_id,name,title,email,role,buying_role,seniority,is_customer,is_internal
+person_helio_grid_energy_maya_torres,acct_helio_grid_energy,Maya Torres,Director of Grid Operations,maya.torres@helio-grid.example,champion,influencer,manager,true,false
+person_helio_grid_energy_felix_nouri,acct_helio_grid_energy,Felix Nouri,VP Operations,felix.nouri@helio-grid.example,economic_buyer,decision_maker,executive,true,false
+person_helio_grid_energy_priya_shah,acct_helio_grid_energy,Priya Shah,Compliance Lead,priya.shah@helio-grid.example,legal,blocker,manager,true,false
+person_helio_grid_energy_rowan_pike,acct_helio_grid_energy,Rowan Pike,Account Executive,rowan.pike@promiseledger.example,admin,influencer,manager,false,true
+person_helio_grid_energy_lina_ortiz,acct_helio_grid_energy,Lina Ortiz,Customer Success Lead,lina.ortiz@promiseledger.example,admin,influencer,manager,false,true
+person_helio_grid_energy_theo_grant,acct_helio_grid_energy,Theo Grant,"Product Manager, Automation Safety",theo.grant@promiseledger.example,technical_evaluator,influencer,manager,false,true
+person_helio_grid_energy_nora_bell,acct_helio_grid_energy,Nora Bell,Security and Safety Reviewer,nora.bell@promiseledger.example,technical_evaluator,blocker,manager,false,true

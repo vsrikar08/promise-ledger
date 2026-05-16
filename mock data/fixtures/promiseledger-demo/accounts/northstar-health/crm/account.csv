@@ -1,0 +1,2 @@
+account_id,account_name,domain,industry,segment,arr,region,account_owner_id,cs_owner_id,health,status,next_renewal_date,notes
+acct_northstar_health,Northstar Health,northstarhealth.example,healthcare operations,enterprise,0,NA-East,person_northstar_health_maya_chen,person_northstar_health_hanna_li,yellow,prospect,2027-06-30,"Regulated workflow deployment depends on security docs, BAA review, and procurement approval."

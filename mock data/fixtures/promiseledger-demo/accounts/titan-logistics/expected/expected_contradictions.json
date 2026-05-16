@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_titan_logistics",
+  "contradictions": [
+    {
+      "contradictionId": "contra_titan_logistics_support_sla",
+      "accountId": "acct_titan_logistics",
+      "severity": "critical",
+      "category": "support_sla_mismatch",
+      "summary": "Support suggested the dashboard might be back by Monday, but the order form states support targets are best-effort and not guaranteed resolution times.",
+      "claimA": {
+        "sourceId": "src_titan_logistics_support_2026_05_19_routing_dashboard",
+        "text": "I expect we can get the dashboard back by Monday, May 25 if Product confirms the aggregation fix.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_titan_logistics_order_form_2026_05_01",
+        "text": "Support targets are commercially reasonable efforts and are not guaranteed resolution times.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Use escalation and resolution-plan wording, not guaranteed SLA wording, until a signed amendment exists."
+    },
+    {
+      "contradictionId": "contra_titan_logistics_owner_assignment",
+      "accountId": "acct_titan_logistics",
+      "severity": "high",
+      "category": "approval_mismatch",
+      "summary": "Customer-facing follow-up promises a named owner by Monday, while internal Slack says no product owner is assigned yet.",
+      "claimA": {
+        "sourceId": "src_titan_logistics_email_2026_05_20_renewal_followup",
+        "text": "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday.",
+        "reliability": "high"
+      },
+      "claimB": {
+        "sourceId": "src_titan_logistics_slack_2026_05_20_support_escalation",
+        "text": "No product owner assigned yet for the routing dashboard fix.",
+        "reliability": "medium"
+      },
+      "recommendedResolution": "Assign Product owner before Monday update or explicitly state owner assignment is pending."
+    }
+  ]
+}

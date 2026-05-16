@@ -1,0 +1,33 @@
+schemaVersion: "0.1"
+sourceId: "src_acme_robotics_procurement_checklist_2026_05_17"
+sourceType: "procurement_checklist"
+accountId: "acct_acme_robotics"
+createdAt: "2026-05-17T12:00:00-07:00"
+visibility: "customer_facing"
+reliability: "high"
+
+items:
+  - itemId: "proc_security_packet"
+    requestedByPersonId: "person_acme_robotics_erin_blake"
+    ownerSide: "internal"
+    ownerPersonId: "person_acme_robotics_lee_ortiz"
+    title: "Security packet with SOC 2 summary, data flow diagram, and subprocessors list"
+    dueDate: "2026-05-22"
+    status: "open"
+    evidenceRequired: true
+  - itemId: "proc_netsuite_field_map"
+    requestedByPersonId: "person_acme_robotics_alex_rivera"
+    ownerSide: "customer"
+    ownerPersonId: "person_acme_robotics_miguel_santos"
+    title: "NetSuite field map"
+    dueDate: "2026-05-19"
+    status: "open"
+    evidenceRequired: true
+  - itemId: "proc_customer_checklist"
+    requestedByPersonId: "person_acme_robotics_alex_rivera"
+    ownerSide: "customer"
+    ownerPersonId: "person_acme_robotics_erin_blake"
+    title: "Acme procurement checklist"
+    dueDate: "2026-05-20"
+    status: "open"
+    evidenceRequired: true

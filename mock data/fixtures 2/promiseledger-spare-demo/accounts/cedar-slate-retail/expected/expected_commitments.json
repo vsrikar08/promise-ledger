@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_cedar_slate_retail",
+  "commitments": [
+    {
+      "commitmentId": "com_cedar_slate_retail_daily_inventory_batch_june_2",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Stand up daily inventory batch sync by June 2.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_diego_santos",
+      "promisedToPersonId": "person_cedar_slate_retail_elise_morgan",
+      "ownerPersonId": "person_cedar_slate_retail_diego_santos",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-02",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Launch readiness depends on inventory batch sync.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_retail_inventory",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "src_cedar_slate_retail_onboarding_plan_2026_05_27"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L013 00:06:44",
+          "quote": "We will stand up the daily inventory batch sync by June 2."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_onboarding_plan_2026_05_27",
+          "locator": "milestone ms_cedar_daily_inventory_batch sourceText",
+          "quote": "Daily inventory batch sync ready by 2026-06-02."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_executive_dashboard_june_5",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Deliver an executive launch readiness dashboard by June 5.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_mira_chen",
+      "promisedToPersonId": "person_cedar_slate_retail_elise_morgan",
+      "ownerPersonId": "person_cedar_slate_retail_diego_santos",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-05",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "Supported deliverable with clear date.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_launch_readiness",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "src_cedar_slate_retail_onboarding_plan_2026_05_27"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L014 00:07:18",
+          "quote": "We will deliver an executive launch readiness dashboard by June 5."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_onboarding_plan_2026_05_27",
+          "locator": "milestone ms_cedar_launch_dashboard sourceText",
+          "quote": "Executive launch readiness dashboard available by 2026-06-05."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_realtime_reconciliation_soft",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "AE suggested real-time payment reconciliation could likely work before launch.",
+      "type": "unsupported_claim",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_mira_chen",
+      "promisedToPersonId": "person_cedar_slate_retail_omar_linden",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-06-10",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Product support matrix says real-time payment reconciliation is planned, not generally available.",
+      "confidence": 0.88,
+      "linkedProductAreaId": "prod_payment_reconciliation",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "src_cedar_slate_retail_integration_support_matrix_2026_05_21"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L007 00:03:19",
+          "quote": "We can likely get real-time reconciliation working before launch."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_integration_support_matrix_2026_05_21",
+          "locator": "cap_realtime_payment_matrix internalNotes",
+          "quote": "Real-time payment reconciliation is planned, not generally available."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_customer_pos_map_credentials",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Cedar & Slate will send POS field map and sandbox credentials by May 24.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_cedar_slate_retail_elise_morgan",
+      "promisedToPersonId": "person_cedar_slate_retail_mira_chen",
+      "ownerPersonId": "person_cedar_slate_retail_elise_morgan",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-24",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Batch workflow setup depends on customer-provided POS mapping and credentials.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_retail_inventory",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "src_cedar_slate_retail_email_2026_05_19_launch_planning"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L011 00:05:39",
+          "quote": "Cedar & Slate will send the POS field map and sandbox credentials by May 24."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_email_2026_05_19_launch_planning",
+          "locator": "email_launch_planning_002",
+          "quote": "Cedar & Slate will send the POS field map and sandbox credentials by May 24."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_customer_ask_realtime_before_launch",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Customer asked for real-time payment reconciliation and inventory sync before June 10 launch.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_omar_linden",
+      "promisedToPersonId": "person_cedar_slate_retail_mira_chen",
+      "ownerPersonId": "person_cedar_slate_retail_mira_chen",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "needs_review",
+      "risk": "high",
+      "riskReason": "The ask could create launch-scope expectations beyond the proposal.",
+      "confidence": 0.91,
+      "linkedProductAreaId": "prod_payment_reconciliation",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L005 00:02:14",
+          "quote": "Can we get real-time payment reconciliation and inventory sync before the June 10 launch?"
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_confirm_payment_token_scope",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Confirm the payment token scope with Product by May 22.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_cedar_slate_retail_mira_chen",
+      "promisedToPersonId": "person_cedar_slate_retail_talia_chen",
+      "ownerPersonId": "person_cedar_slate_retail_ivy_kapoor",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Payment token handling is a sensitive security and product scope question.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_payment_security",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+        "src_cedar_slate_retail_email_2026_05_19_launch_planning"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_call_2026_05_19_expansion_demo",
+          "locator": "L010 00:05:02",
+          "quote": "I will confirm the payment token scope with Product by May 22."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_email_2026_05_19_launch_planning",
+          "locator": "email_launch_planning_001",
+          "quote": "I will confirm the payment token scope with Product by May 22."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_payment_token_excluded",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Payment token handling is excluded and the vendor will not receive or process payment tokens.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_mira_chen",
+      "promisedToPersonId": "person_cedar_slate_retail_talia_chen",
+      "ownerPersonId": "person_cedar_slate_retail_ivy_kapoor",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-26",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Customer-facing language must not imply token handling is included.",
+      "confidence": 0.97,
+      "linkedProductAreaId": "prod_payment_security",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_sow_2026_05_26"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_sow_2026_05_26",
+          "locator": "Vendor Obligations",
+          "quote": "Vendor will not receive or process payment tokens."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_payment_reconciliation_missing_owner",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Payment reconciliation question has no implementation owner yet.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_cedar_slate_retail_diego_santos",
+      "promisedToPersonId": "person_cedar_slate_retail_mira_chen",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-22",
+      "status": "needs_review",
+      "risk": "medium",
+      "riskReason": "Customer expects an owner for the open review item before launch messaging.",
+      "confidence": 0.87,
+      "linkedProductAreaId": "prod_payment_reconciliation",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_slack_2026_05_20_implementation_handoff",
+        "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_slack_2026_05_20_implementation_handoff",
+          "locator": "slack_msg_cedar_slate_retail_implementation_handoff_002",
+          "quote": "I can own inventory setup, but I do not have an owner yet for the payment reconciliation question."
+        },
+        {
+          "sourceId": "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+          "locator": "ticket_event_004",
+          "quote": "Owner for payment reconciliation question is still unclear on the implementation side."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_support_mapping_update_may_23",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Support will publish a connector mapping update by May 23 and escalate unmapped SKU families.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_jules_park",
+      "promisedToPersonId": "person_cedar_slate_retail_omar_linden",
+      "ownerPersonId": "person_cedar_slate_retail_jules_park",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-23",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "This support promise may be interpreted as a same-day connector-change SLA, while the SOW says support is best-effort.",
+      "confidence": 0.86,
+      "linkedProductAreaId": "prod_retail_inventory",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+          "locator": "ticket_event_003",
+          "quote": "Support will publish a connector mapping update by May 23 and escalate unmapped SKU families to Product Integrations."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_cedar_slate_retail_inventory_blocker_store_014",
+      "accountId": "acct_cedar_slate_retail",
+      "dealId": "deal_cedar_slate_retail_expansion_launch",
+      "normalizedText": "Store 014 inventory mismatch is blocking launch readiness.",
+      "type": "expectation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_cedar_slate_retail_omar_linden",
+      "promisedToPersonId": "person_cedar_slate_retail_jules_park",
+      "ownerPersonId": "person_cedar_slate_retail_jules_park",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-23",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Customer has explicitly tied the ticket to launch readiness.",
+      "confidence": 0.89,
+      "linkedProductAreaId": "prod_retail_inventory",
+      "linkedSourceIds": [
+        "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_cedar_slate_retail_support_2026_05_21_inventory_sync_ticket",
+          "locator": "ticket_event_001",
+          "quote": "Inventory counts from Store 014 are not matching ecommerce after overnight import, and this is blocking launch readiness."
+        }
+      ]
+    }
+  ]
+}

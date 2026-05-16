@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_helio_grid_energy",
+  "guardCases": [
+    {
+      "draftId": "draft_helio_grid_energy_safe_followup",
+      "expectedDecision": "allow",
+      "risk": "low",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_helio_grid_energy_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "We can enable live grid-dispatch automation during the pilot.",
+          "reason": "Pilot mode supports simulation and human-approved recommendations only; live grid-dispatch automation is unsupported and excluded by policy and SOW.",
+          "conflictingSourceIds": [
+            "src_helio_grid_energy_product_scope_2026_05_17",
+            "src_helio_grid_energy_policy_boundaries_2026_05_18",
+            "src_helio_grid_energy_sow_2026_05_24"
+          ],
+          "safeAlternative": "During the pilot, we can simulate grid-dispatch workflows and route recommendations for operator approval before any live automation is considered."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "The operator approval queue will be able to approve live actions during the May 29 tabletop.",
+          "reason": "The operator approval queue may approve simulated recommendations only during the pilot.",
+          "conflictingSourceIds": [
+            "src_helio_grid_energy_product_scope_2026_05_17",
+            "src_helio_grid_energy_sow_2026_05_24"
+          ],
+          "safeAlternative": "The operator approval queue can capture human approval decisions for simulated recommendations during the pilot."
+        }
+      ]
+    }
+  ]
+}

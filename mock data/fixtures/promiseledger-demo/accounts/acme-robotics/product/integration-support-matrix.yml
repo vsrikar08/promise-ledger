@@ -1,0 +1,46 @@
+schemaVersion: "0.1"
+sourceId: "src_acme_robotics_integration_support_matrix_2026_05_16"
+sourceType: "integration_support_matrix"
+accountId: "acct_acme_robotics"
+createdAt: "2026-05-16T12:30:00-07:00"
+ownerTeam: "Product"
+visibility: "product"
+reliability: "authoritative"
+
+capabilities:
+  - capabilityId: "cap_csv_import"
+    name: "CSV Import"
+    productAreaId: "prod_integrations"
+    status: "generally_available"
+    customerFacingDescription: "CSV imports are supported for pilot data loading."
+    internalNotes: "Preferred Acme pilot path if NetSuite is blocked."
+    allowedInPilot: true
+    requiresApproval: false
+    approvalOwnerPersonId: "person_acme_robotics_nora_chen"
+    supportedIntegrations: ["CSV Import"]
+    unsupportedIntegrations: []
+    promiseGuardPolicy:
+      allowedClaims:
+        - "CSV-based imports are supported for pilot data loading."
+      blockedClaims:
+        - "CSV imports are unnecessary because NetSuite will be live in pilot."
+      safeAlternativeWording:
+        - "We can use CSV import as the supported pilot data path."
+  - capabilityId: "cap_netsuite_connector"
+    name: "NetSuite Connector"
+    productAreaId: "prod_integrations"
+    status: "planned"
+    customerFacingDescription: "NetSuite connector support is planned but not available for pilot commitments."
+    internalNotes: "No customer pilot may commit to NetSuite before Product signs off."
+    allowedInPilot: false
+    requiresApproval: true
+    approvalOwnerPersonId: "person_acme_robotics_nora_chen"
+    supportedIntegrations: []
+    unsupportedIntegrations: ["NetSuite ERP"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "We are evaluating NetSuite requirements for a future integration path."
+      blockedClaims:
+        - "NetSuite is definitely supported for the pilot."
+      safeAlternativeWording:
+        - "We’ll confirm the NetSuite integration scope with product before adding it to the pilot plan."

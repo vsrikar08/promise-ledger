@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_titan_logistics_renewal,acct_titan_logistics,Titan Logistics 2026 Renewal,renewal,180000,2026-08-31,person_titan_logistics_evan_holt,renewal,routing visibility and fleet exception workflows,RouteVista,Send confirmed dashboard owner and resolution plan by Monday May 25,best_case

@@ -1,0 +1,71 @@
+schemaVersion: '0.1'
+sourceId: src_ridgeway_university_product_scope_2026_05_22
+sourceType: product_scope
+accountId: acct_ridgeway_university
+createdAt: '2026-05-22T12:00:00-07:00'
+ownerTeam: Product
+visibility: product
+reliability: authoritative
+capabilities:
+- capabilityId: cap_sandbox_roster_import
+  name: Sandbox Roster Import
+  productAreaId: prod_student_roster
+  status: generally_available
+  customerFacingDescription: Imports sandbox roster data for mapping and validation.
+  internalNotes: Allowed before DPA approval if no production student data is included.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_ridgeway_university_neil_avery
+  supportedIntegrations:
+  - sandbox_roster_csv
+  unsupportedIntegrations:
+  - production_roster_csv_before_dpa
+  promiseGuardPolicy:
+    allowedClaims:
+    - We can begin sandbox onboarding next week.
+    blockedClaims:
+    - We can start processing production student roster data next week before the DPA is finalized.
+    safeAlternativeWording:
+    - We can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation
+      are complete.
+- capabilityId: cap_production_roster_import
+  name: Production Roster Import
+  productAreaId: prod_student_roster
+  status: planned
+  customerFacingDescription: Production roster import is available only after DPA approval and sandbox validation.
+  internalNotes: Production student roster data is privacy-sensitive and restricted.
+  allowedInPilot: false
+  requiresApproval: true
+  approvalOwnerPersonId: person_ridgeway_university_camille_yu
+  supportedIntegrations: []
+  unsupportedIntegrations:
+  - production_student_roster_before_dpa
+  promiseGuardPolicy:
+    allowedClaims:
+    - Production roster processing can begin after DPA approval and sandbox validation.
+    blockedClaims:
+    - We can start processing production student roster data next week before the DPA is finalized.
+    safeAlternativeWording:
+    - We can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation
+      are complete.
+- capabilityId: cap_sso_metadata_configuration
+  name: SSO Metadata Configuration
+  productAreaId: prod_identity
+  status: generally_available
+  customerFacingDescription: Configures SSO metadata and test-user authentication.
+  internalNotes: SSO can proceed without production roster data.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_ridgeway_university_neil_avery
+  supportedIntegrations:
+  - saml_metadata
+  - test_users
+  unsupportedIntegrations:
+  - production_roster_sync
+  promiseGuardPolicy:
+    allowedClaims:
+    - SSO can proceed without production roster data.
+    blockedClaims:
+    - SSO requires production roster processing before DPA.
+    safeAlternativeWording:
+    - SSO configuration can proceed with test users and sandbox data.

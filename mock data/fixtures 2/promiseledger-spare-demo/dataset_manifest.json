@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "datasetName": "promiseledger-spare-demo",
+  "generatedAt": "2026-05-16T20:00:00-07:00",
+  "description": "Fictional spare PromiseLedger fixture dataset for hackathon demo.",
+  "accounts": [
+    {
+      "accountId": "acct_helio_grid_energy",
+      "accountSlug": "helio-grid-energy",
+      "accountName": "HelioGrid Energy",
+      "scenarioType": "regulated_infrastructure_pilot",
+      "primaryDemoMoment": "unsupported_live_automation_promise"
+    },
+    {
+      "accountId": "acct_cedar_slate_retail",
+      "accountSlug": "cedar-slate-retail",
+      "accountName": "Cedar & Slate Retail",
+      "scenarioType": "retail_expansion",
+      "primaryDemoMoment": "payment_data_scope_mismatch"
+    },
+    {
+      "accountId": "acct_ridgeway_university",
+      "accountSlug": "ridgeway-university",
+      "accountName": "Ridgeway University",
+      "scenarioType": "education_onboarding",
+      "primaryDemoMoment": "privacy_legal_timeline_mismatch"
+    }
+  ]
+}

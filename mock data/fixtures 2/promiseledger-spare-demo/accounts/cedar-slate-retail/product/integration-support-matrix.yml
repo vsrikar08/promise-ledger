@@ -1,0 +1,50 @@
+schemaVersion: '0.1'
+sourceId: src_cedar_slate_retail_integration_support_matrix_2026_05_21
+sourceType: integration_support_matrix
+accountId: acct_cedar_slate_retail
+createdAt: '2026-05-21T12:00:00-07:00'
+ownerTeam: Product
+visibility: product
+reliability: authoritative
+capabilities:
+- capabilityId: cap_pos_field_mapping
+  name: POS Field Mapping
+  productAreaId: prod_retail_inventory
+  status: beta
+  customerFacingDescription: Maps POS fields to PromiseLedger retail inventory schema.
+  internalNotes: Mapping issues can delay batch import; support may publish mapping updates.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations:
+  - pos_field_map
+  unsupportedIntegrations:
+  - unmapped_sku_families
+  promiseGuardPolicy:
+    allowedClaims:
+    - POS field mapping is supported for batch inventory sync.
+    blockedClaims:
+    - All unmapped SKU families will be resolved same day.
+    safeAlternativeWording:
+    - Support can review unmapped SKU families and publish connector mapping updates when available.
+- capabilityId: cap_realtime_payment_matrix
+  name: Real-time Payment Matrix
+  productAreaId: prod_payment_reconciliation
+  status: planned
+  customerFacingDescription: Product review path for future real-time payment reconciliation.
+  internalNotes: Real-time payment reconciliation is planned, not generally available.
+  allowedInPilot: false
+  requiresApproval: true
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations: []
+  unsupportedIntegrations:
+  - real_time_settlement
+  - payment_tokens
+  promiseGuardPolicy:
+    allowedClaims:
+    - Real-time payment reconciliation requires Product review.
+    blockedClaims:
+    - Real-time payment reconciliation and payment token handling are included before launch.
+    safeAlternativeWording:
+    - We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product
+      review.

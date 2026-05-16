@@ -1,0 +1,64 @@
+schemaVersion: "0.1"
+sourceId: "src_acme_robotics_product_scope_2026_05_16"
+sourceType: "product_scope"
+accountId: "acct_acme_robotics"
+createdAt: "2026-05-16T12:00:00-07:00"
+ownerTeam: "Product"
+visibility: "product"
+reliability: "authoritative"
+
+capabilities:
+  - capabilityId: "cap_preview_email_actions"
+    name: "Preview Email Actions"
+    productAreaId: "prod_workflow_automation"
+    status: "pilot_only"
+    customerFacingDescription: "Users can preview outbound email actions during pilot workflows."
+    internalNotes: "Live external delivery remains disabled unless a separate go-live approval is signed."
+    allowedInPilot: true
+    requiresApproval: false
+    approvalOwnerPersonId: "person_acme_robotics_nora_chen"
+    supportedIntegrations: ["CSV Import"]
+    unsupportedIntegrations: ["Live SMTP Send"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "During the pilot, external email actions remain preview-only unless Acme approves a separate go-live step."
+      blockedClaims:
+        - "Live external emails are enabled during the pilot."
+      safeAlternativeWording:
+        - "We can support preview-only email workflows during the pilot."
+  - capabilityId: "cap_netsuite_sync"
+    name: "NetSuite Sync"
+    productAreaId: "prod_integrations"
+    status: "unsupported"
+    customerFacingDescription: "NetSuite integration is under evaluation and is not part of the standard pilot package."
+    internalNotes: "NetSuite is not approved for the pilot."
+    allowedInPilot: false
+    requiresApproval: true
+    approvalOwnerPersonId: "person_acme_robotics_nora_chen"
+    supportedIntegrations: []
+    unsupportedIntegrations: ["NetSuite ERP"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "NetSuite integration is under evaluation for a future scope decision."
+      blockedClaims:
+        - "NetSuite is definitely supported for the pilot."
+      safeAlternativeWording:
+        - "We’ll confirm the NetSuite integration scope with product before adding it to the pilot plan."
+  - capabilityId: "cap_dashboard_preview"
+    name: "Renewal Dashboard Preview"
+    productAreaId: "prod_analytics"
+    status: "beta"
+    customerFacingDescription: "A dashboard preview can be scoped from mapped renewal fields."
+    internalNotes: "No production dashboard commitment without Product approval."
+    allowedInPilot: true
+    requiresApproval: true
+    approvalOwnerPersonId: "person_acme_robotics_nora_chen"
+    supportedIntegrations: ["CSV Import"]
+    unsupportedIntegrations: ["NetSuite ERP"]
+    promiseGuardPolicy:
+      allowedClaims:
+        - "We can scope a renewal dashboard preview plan after reviewing mapped fields."
+      blockedClaims:
+        - "A production renewal dashboard will be delivered before QBR."
+      safeAlternativeWording:
+        - "We will share a renewal dashboard preview plan after reviewing the field map."

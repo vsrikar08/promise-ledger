@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_ridgeway_university",
+  "accountSlug": "ridgeway-university",
+  "accountName": "Ridgeway University",
+  "industry": "higher education administration",
+  "scenarioType": "education_onboarding",
+  "fixtureIntent": {
+    "primaryDemoMoment": "privacy_legal_timeline_mismatch",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_ridgeway_university_crm_account_2026_05_20",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_hannah_brooks",
+        "person_ridgeway_university_marcus_lee",
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_crm_contacts_2026_05_20",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_hannah_brooks",
+        "person_ridgeway_university_marcus_lee",
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_crm_opportunity_2026_05_20",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_hannah_brooks"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_crm_tasks_2026_05_20",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-20",
+      "system": "salesforce",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+      "path": "calls/2026-05-21__onboarding-discovery-call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-21",
+      "system": "gong",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_hannah_brooks",
+        "person_ridgeway_university_marcus_lee",
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+      "path": "emails/2026-05-21__privacy-onboarding-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-21",
+      "system": "gmail",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_hannah_brooks",
+        "person_ridgeway_university_marcus_lee",
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_camille_yu"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_proposal_2026_05_22",
+      "path": "proposals/2026-05-22__implementation-proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-22",
+      "system": "google_docs",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_sow_2026_05_28",
+      "path": "contracts/2026-05-28__sow.md",
+      "sourceType": "sow",
+      "date": "2026-05-28",
+      "system": "google_docs",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_sierra_patton"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_dpa_excerpt_2026_05_28",
+      "path": "contracts/2026-05-28__dpa-excerpt.md",
+      "sourceType": "dpa_excerpt",
+      "date": "2026-05-28",
+      "system": "google_docs",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_camille_yu"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_slack_2026_05_22_legal_security",
+      "path": "slack/2026-05-22__legal-security-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-22",
+      "system": "slack",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_slack_2026_05_22_cs_handoff",
+      "path": "slack/2026-05-22__cs-handoff-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-22",
+      "system": "slack",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_sierra_patton",
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_product_scope_2026_05_22",
+      "path": "product/product-scope.yml",
+      "sourceType": "product_scope",
+      "date": "2026-05-22",
+      "system": "notion",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_privacy_review_2026_05_23",
+      "path": "security_legal/2026-05-23__privacy-review.md",
+      "sourceType": "privacy_review",
+      "date": "2026-05-23",
+      "system": "notion",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_camille_yu",
+        "person_ridgeway_university_neil_avery"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_procurement_checklist_2026_05_24",
+      "path": "security_legal/2026-05-24__procurement-checklist.yml",
+      "sourceType": "procurement_checklist",
+      "date": "2026-05-24",
+      "system": "notion",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_lena_ortega",
+        "person_ridgeway_university_camille_yu"
+      ]
+    },
+    {
+      "sourceId": "src_ridgeway_university_onboarding_plan_2026_05_29",
+      "path": "onboarding/2026-05-29__onboarding-plan.md",
+      "sourceType": "onboarding_plan",
+      "date": "2026-05-29",
+      "system": "google_docs",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "participants": [
+        "person_ridgeway_university_owen_rios",
+        "person_ridgeway_university_hannah_brooks"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true,
+    "doNotMakeEveryContradictionObvious": true
+  }
+}

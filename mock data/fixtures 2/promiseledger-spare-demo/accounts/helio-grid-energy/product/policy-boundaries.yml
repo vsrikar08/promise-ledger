@@ -1,0 +1,33 @@
+schemaVersion: '0.1'
+sourceId: src_helio_grid_energy_policy_boundaries_2026_05_18
+sourceType: policy_boundaries
+accountId: acct_helio_grid_energy
+createdAt: '2026-05-18T12:00:00-07:00'
+ownerTeam: Product
+visibility: product
+reliability: authoritative
+capabilities:
+- capabilityId: cap_pilot_safety_boundary
+  name: Pilot Safety Boundary
+  productAreaId: prod_safety_boundary
+  status: generally_available
+  customerFacingDescription: Pilot accounts may evaluate recommendations with simulation and human approval gates.
+  internalNotes: No live control-plane actions or automatic grid dispatch may be enabled during any pilot.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_helio_grid_energy_nora_bell
+  supportedIntegrations:
+  - simulation_workspace
+  - operator_approval_queue
+  unsupportedIntegrations:
+  - grid_dispatch_api
+  - live_scada_control
+  promiseGuardPolicy:
+    allowedClaims:
+    - Pilot activity is simulation-only with operator approval gates.
+    blockedClaims:
+    - We can enable live grid-dispatch automation during the pilot.
+    - Automatic dispatch can occur during the pilot.
+    safeAlternativeWording:
+    - During the pilot, we can simulate grid-dispatch workflows and route recommendations for operator approval before any
+      live automation is considered.

@@ -1,0 +1,93 @@
+schemaVersion: '0.1'
+sourceId: src_cedar_slate_retail_product_scope_2026_05_20
+sourceType: product_scope
+accountId: acct_cedar_slate_retail
+createdAt: '2026-05-20T12:00:00-07:00'
+ownerTeam: Product
+visibility: product
+reliability: authoritative
+capabilities:
+- capabilityId: cap_daily_inventory_batch
+  name: Daily Inventory Batch Sync
+  productAreaId: prod_retail_inventory
+  status: generally_available
+  customerFacingDescription: Daily POS-to-ecommerce inventory batch import for pilot accounts.
+  internalNotes: Not same-day or real-time.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations:
+  - pos_field_map
+  - sku_catalog
+  unsupportedIntegrations:
+  - event_triggered_inventory_sync
+  promiseGuardPolicy:
+    allowedClaims:
+    - Daily inventory batch sync is included for launch.
+    blockedClaims:
+    - Event-triggered inventory updates are committed before launch.
+    safeAlternativeWording:
+    - Daily batch inventory sync is included; event-triggered updates require product review.
+- capabilityId: cap_daily_batch_reconciliation
+  name: Daily Batch Reconciliation
+  productAreaId: prod_payment_reconciliation
+  status: generally_available
+  customerFacingDescription: Daily reconciliation summaries without token processing.
+  internalNotes: Payment token values are not accepted.
+  allowedInPilot: true
+  requiresApproval: false
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations:
+  - batch_settlement_files
+  unsupportedIntegrations:
+  - payment_tokens
+  - real_time_card_settlement
+  promiseGuardPolicy:
+    allowedClaims:
+    - Daily batch reconciliation is included for launch.
+    blockedClaims:
+    - Real-time payment reconciliation and payment token handling are included before launch.
+    safeAlternativeWording:
+    - We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product
+      review.
+- capabilityId: cap_realtime_payment_reconciliation
+  name: Real-time Payment Reconciliation
+  productAreaId: prod_payment_reconciliation
+  status: planned
+  customerFacingDescription: Future reconciliation mode under Product review.
+  internalNotes: Real-time payment reconciliation is planned, not generally available.
+  allowedInPilot: false
+  requiresApproval: true
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations: []
+  unsupportedIntegrations:
+  - real_time_card_settlement
+  promiseGuardPolicy:
+    allowedClaims:
+    - Real-time reconciliation can be reviewed after Product approval.
+    blockedClaims:
+    - Real-time payment reconciliation and payment token handling are included before launch.
+    safeAlternativeWording:
+    - We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product
+      review.
+- capabilityId: cap_payment_token_handling
+  name: Payment Token Handling
+  productAreaId: prod_payment_security
+  status: unsupported
+  customerFacingDescription: Payment token handling is not supported for pilot accounts.
+  internalNotes: No customer-facing message should say payment token handling is included.
+  allowedInPilot: false
+  requiresApproval: true
+  approvalOwnerPersonId: person_cedar_slate_retail_ivy_kapoor
+  supportedIntegrations: []
+  unsupportedIntegrations:
+  - payment_tokens
+  - cardholder_data
+  promiseGuardPolicy:
+    allowedClaims:
+    - Payment token handling is excluded from pilot scope.
+    blockedClaims:
+    - Real-time payment reconciliation and payment token handling are included before launch.
+    safeAlternativeWording:
+    - We can include daily batch reconciliation for launch and confirm the real-time payment reconciliation scope after product
+      review.

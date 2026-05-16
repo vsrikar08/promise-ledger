@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_northstar_health",
+  "accountSlug": "northstar-health",
+  "accountName": "Northstar Health",
+  "industry": "healthcare operations",
+  "scenarioType": "security_procurement",
+  "fixtureIntent": {
+    "primaryDemoMoment": "timeline_mismatch",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_northstar_health_crm_account_2026_05_18_account",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-18",
+      "system": "salesforce",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_crm_contacts_2026_05_18_contacts",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-18",
+      "system": "salesforce",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_crm_opportunity_2026_05_18_deployment",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-18",
+      "system": "salesforce",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_crm_tasks_2026_05_18_tasks",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-18",
+      "system": "salesforce",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_call_2026_05_18_security_review",
+      "path": "calls/2026-05-18__security-review-call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-18",
+      "system": "zoom",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_email_2026_05_18_procurement_thread",
+      "path": "emails/2026-05-18__procurement-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-18",
+      "system": "gmail",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_proposal_2026_05_18",
+      "path": "proposals/2026-05-18__proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-18",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_sow_2026_05_22",
+      "path": "contracts/2026-05-22__sow.md",
+      "sourceType": "sow",
+      "date": "2026-05-22",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_msa_2026_05_22",
+      "path": "contracts/2026-05-22__msa-excerpt.md",
+      "sourceType": "msa_excerpt",
+      "date": "2026-05-22",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_slack_2026_05_18_legal_security_thread",
+      "path": "slack/2026-05-18__legal-security-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-18",
+      "system": "slack",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_product_scope_2026_05_18",
+      "path": "product/product-scope.yml",
+      "sourceType": "product_scope",
+      "date": "2026-05-18",
+      "system": "notion",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_security_review_2026_05_19",
+      "path": "security_legal/2026-05-19__security-review.md",
+      "sourceType": "security_review",
+      "date": "2026-05-19",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_procurement_checklist_2026_05_19",
+      "path": "security_legal/2026-05-19__procurement-checklist.yml",
+      "sourceType": "procurement_checklist",
+      "date": "2026-05-19",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_legal_redlines_2026_05_20",
+      "path": "security_legal/2026-05-20__legal-redlines-summary.md",
+      "sourceType": "legal_redlines",
+      "date": "2026-05-20",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    },
+    {
+      "sourceId": "src_northstar_health_onboarding_plan_2026_05_23",
+      "path": "onboarding/2026-05-23__onboarding-plan.md",
+      "sourceType": "onboarding_plan",
+      "date": "2026-05-23",
+      "system": "google_docs",
+      "accountId": "acct_northstar_health",
+      "dealId": "deal_northstar_health_regulated_workflow_deployment",
+      "participants": [
+        "person_northstar_health_maya_chen",
+        "person_northstar_health_renee_cole"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true
+  }
+}

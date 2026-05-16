@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_acme_robotics",
+  "commitments": [
+    {
+      "commitmentId": "com_acme_robotics_security_packet_by_friday",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Send Acme the security packet by Friday, May 22, 2026.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_acme_robotics_alex_rivera",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "person_acme_robotics_lee_ortiz",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "Clear owner, clear date, and standard security deliverable.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_security",
+      "linkedSourceIds": [
+        "src_acme_robotics_call_2026_05_16_demo",
+        "src_acme_robotics_email_2026_05_16_followup_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+          "locator": "L007 00:02:55",
+          "quote": "We will send the security packet by Friday, May 22."
+        },
+        {
+          "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+          "locator": "email_acme_followup_001",
+          "quote": "I’ll send the security packet by Friday, May 22."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_confirm_netsuite_scope",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Confirm NetSuite integration scope with Product before adding it to the pilot plan.",
+      "type": "internal_followup",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_acme_robotics_alex_rivera",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "person_acme_robotics_priya_menon",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-21",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Customer may interpret NetSuite as committed, but Product approval is required.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_integrations",
+      "linkedSourceIds": [
+        "src_acme_robotics_call_2026_05_16_demo",
+        "src_acme_robotics_email_2026_05_16_followup_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+          "locator": "L005 00:02:10",
+          "quote": "NetSuite should be supportable for the pilot, but I will confirm exact scope with Product."
+        },
+        {
+          "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+          "locator": "email_acme_followup_001",
+          "quote": "We’ll confirm the NetSuite integration scope with Product before adding it to the pilot plan."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_netsuite_customer_ask",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Customer needs NetSuite considered because renewal data lives there.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_acme_robotics_miguel_santos",
+      "promisedToPersonId": "person_acme_robotics_alex_rivera",
+      "ownerPersonId": "person_acme_robotics_priya_menon",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-21",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Ask is important but not approved as pilot scope.",
+      "confidence": 0.88,
+      "linkedProductAreaId": "prod_integrations",
+      "linkedSourceIds": [
+        "src_acme_robotics_call_2026_05_16_demo"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+          "locator": "L004 00:01:42",
+          "quote": "NetSuite integration is important for the pilot because our renewal data lives there."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_netsuite_unsupported_claim",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Do not claim NetSuite is supported for the pilot without Product approval.",
+      "type": "unsupported_claim",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_acme_robotics_alex_rivera",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-21",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Authoritative product scope says NetSuite is unsupported for the pilot.",
+      "confidence": 0.97,
+      "linkedProductAreaId": "prod_integrations",
+      "linkedSourceIds": [
+        "src_acme_robotics_product_scope_2026_05_16",
+        "src_acme_robotics_slack_2026_05_16_product_review_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_product_scope_2026_05_16",
+          "locator": "cap_netsuite_sync.internalNotes",
+          "quote": "NetSuite is not approved for the pilot."
+        },
+        {
+          "sourceId": "src_acme_robotics_slack_2026_05_16_product_review_thread",
+          "locator": "slack_msg_acme_product_002",
+          "quote": "NetSuite is not approved for the pilot."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_no_live_external_emails",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Keep live external emails disabled during the pilot unless Acme approves a go-live step.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_acme_robotics_priya_menon",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "person_acme_robotics_priya_menon",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-30",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Legal-sensitive pilot boundary must be enforced.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_workflow_automation",
+      "linkedSourceIds": [
+        "src_acme_robotics_call_2026_05_16_demo",
+        "src_acme_robotics_sow_2026_05_20"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+          "locator": "L015 00:06:48",
+          "quote": "live external emails remain disabled during the pilot unless Acme approves a separate go-live step."
+        },
+        {
+          "sourceId": "src_acme_robotics_sow_2026_05_20",
+          "locator": "Vendor Obligations",
+          "quote": "Vendor must keep external email delivery in preview-only mode during the pilot unless the parties sign a separate go-live approval."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_field_map_by_may_19",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Acme will send the NetSuite field map by Tuesday, May 19, 2026.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_acme_robotics_miguel_santos",
+      "promisedToPersonId": "person_acme_robotics_alex_rivera",
+      "ownerPersonId": "person_acme_robotics_miguel_santos",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-19",
+      "status": "waiting_on_customer",
+      "risk": "low",
+      "riskReason": "Customer dependency required for scoping.",
+      "confidence": 0.91,
+      "linkedProductAreaId": "prod_integrations",
+      "linkedSourceIds": [
+        "src_acme_robotics_email_2026_05_16_followup_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+          "locator": "email_acme_followup_002",
+          "quote": "Miguel will send the NetSuite field map by Tuesday, May 19."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_procurement_checklist_by_may_20",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Acme will upload the procurement checklist by Wednesday, May 20, 2026.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_acme_robotics_erin_blake",
+      "promisedToPersonId": "person_acme_robotics_alex_rivera",
+      "ownerPersonId": "person_acme_robotics_erin_blake",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-20",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Procurement approval depends on checklist completeness.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_procurement",
+      "linkedSourceIds": [
+        "src_acme_robotics_email_2026_05_16_followup_thread"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+          "locator": "email_acme_followup_002",
+          "quote": "Erin will upload our procurement checklist by Wednesday, May 20."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_dashboard_plan",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "Share a renewal dashboard preview plan by May 27, 2026.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_acme_robotics_alex_rivera",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-27",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "Customer tied dashboard to QBR, but Slack shows no owner.",
+      "confidence": 0.86,
+      "linkedProductAreaId": "prod_analytics",
+      "linkedSourceIds": [
+        "src_acme_robotics_email_2026_05_16_followup_thread",
+        "src_acme_robotics_slack_2026_05_16_internal_handoff"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+          "locator": "email_acme_followup_001",
+          "quote": "We will share a renewal dashboard preview plan by May 27"
+        },
+        {
+          "sourceId": "src_acme_robotics_slack_2026_05_16_internal_handoff",
+          "locator": "slack_msg_acme_handoff_003",
+          "quote": "I do not see an owner assigned for the dashboard yet."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_acme_robotics_netsuite_scope_contradiction",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "normalizedText": "NetSuite was implied as supportable on the call but is blocked by Product scope.",
+      "type": "contradiction",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_acme_robotics_alex_rivera",
+      "promisedToPersonId": "person_acme_robotics_jane_park",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-21",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "Risky follow-up could create unsupported product promise.",
+      "confidence": 0.95,
+      "linkedProductAreaId": "prod_integrations",
+      "linkedSourceIds": [
+        "src_acme_robotics_call_2026_05_16_demo",
+        "src_acme_robotics_product_scope_2026_05_16"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+          "locator": "L005 00:02:10",
+          "quote": "NetSuite should be supportable for the pilot"
+        },
+        {
+          "sourceId": "src_acme_robotics_product_scope_2026_05_16",
+          "locator": "cap_netsuite_sync.internalNotes",
+          "quote": "NetSuite is not approved for the pilot."
+        }
+      ]
+    }
+  ]
+}

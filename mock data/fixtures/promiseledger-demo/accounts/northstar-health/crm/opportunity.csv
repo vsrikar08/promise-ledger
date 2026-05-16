@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_northstar_health_regulated_workflow_deployment,acct_northstar_health,Regulated Workflow Deployment,procurement,128000,2026-06-18,person_northstar_health_maya_chen,new_business,HIPAA-aware workflow routing and audit logs,Bluebird Ops Cloud,Send approved security materials and confirm BAA timing before kickoff date,commit

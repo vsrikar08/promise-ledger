@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_titan_logistics",
+  "guardCases": [
+    {
+      "draftId": "draft_titan_logistics_safe_followup",
+      "expectedDecision": "warn",
+      "risk": "medium",
+      "blockedClaims": []
+    },
+    {
+      "draftId": "draft_titan_logistics_risky_followup",
+      "expectedDecision": "block",
+      "risk": "critical",
+      "blockedClaims": [
+        {
+          "claimId": "claim_001",
+          "text": "We guarantee the routing dashboard issue will be fully resolved by Monday under your SLA.",
+          "reason": "The order form says support targets are commercially reasonable efforts and not guaranteed resolution times, and internal notes say no Product owner is assigned yet.",
+          "conflictingSourceIds": [
+            "src_titan_logistics_order_form_2026_05_01",
+            "src_titan_logistics_slack_2026_05_20_support_escalation",
+            "src_titan_logistics_policy_boundaries_2026_05_20"
+          ],
+          "safeAlternative": "We’ve escalated the routing dashboard issue and will share a confirmed resolution plan and owner by Monday."
+        },
+        {
+          "claimId": "claim_002",
+          "text": "The order form already includes a Monday full-resolution SLA.",
+          "reason": "The signed order form excludes guaranteed resolution times and only provides an acknowledgement target.",
+          "conflictingSourceIds": [
+            "src_titan_logistics_order_form_2026_05_01",
+            "src_titan_logistics_policy_boundaries_2026_05_20"
+          ],
+          "safeAlternative": "Urgent case acknowledgement is targeted within four business hours."
+        },
+        {
+          "claimId": "claim_003",
+          "text": "Product has assigned an owner for the fix.",
+          "reason": "Internal Slack says no Product owner is assigned yet.",
+          "conflictingSourceIds": [
+            "src_titan_logistics_slack_2026_05_20_support_escalation",
+            "src_titan_logistics_support_2026_05_20_escalation_thread"
+          ],
+          "safeAlternative": "We will share the confirmed owner once Product assignment is complete."
+        }
+      ]
+    }
+  ]
+}

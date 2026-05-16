@@ -1,0 +1,2 @@
+deal_id,account_id,deal_name,stage,amount,close_date,owner_id,type,primary_use_case,competitor,next_step,forecast_category
+deal_ridgeway_university_student_services_onboarding,acct_ridgeway_university,Student Services Onboarding,procurement,210000,2026-05-31,person_ridgeway_university_sierra_patton,new_business,student roster onboarding and SSO,campus SIS manual import workflow,Send privacy boundary answer and sandbox roster template,best_case

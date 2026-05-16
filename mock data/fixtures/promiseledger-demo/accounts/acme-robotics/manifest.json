@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_acme_robotics",
+  "accountSlug": "acme-robotics",
+  "accountName": "Acme Robotics",
+  "industry": "robotics manufacturing",
+  "scenarioType": "new_business_pilot",
+  "fixtureIntent": {
+    "primaryDemoMoment": "unsupported_product_promise",
+    "shouldIncludeContradiction": true,
+    "shouldIncludeUnsupportedClaim": true,
+    "shouldIncludeMissingOwner": true,
+    "shouldIncludeCustomerCommitment": true,
+    "shouldIncludeDueThisWeek": true
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "src_acme_robotics_crm_account_2026_05_16_account",
+      "path": "crm/account.csv",
+      "sourceType": "crm_account",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_crm_contacts_2026_05_16_contacts",
+      "path": "crm/contacts.csv",
+      "sourceType": "crm_contact",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_crm_opportunity_2026_05_16_pilot",
+      "path": "crm/opportunity.csv",
+      "sourceType": "crm_opportunity",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_crm_tasks_2026_05_16_tasks",
+      "path": "crm/tasks.csv",
+      "sourceType": "crm_task",
+      "date": "2026-05-16",
+      "system": "salesforce",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_call_2026_05_16_demo",
+      "path": "calls/2026-05-16__demo__call.jsonl",
+      "sourceType": "call_transcript",
+      "date": "2026-05-16",
+      "system": "gong",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_email_2026_05_16_followup_thread",
+      "path": "emails/2026-05-16__followup-thread.jsonl",
+      "sourceType": "email_thread",
+      "date": "2026-05-16",
+      "system": "gmail",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_proposal_2026_05_16",
+      "path": "proposals/2026-05-16__proposal.md",
+      "sourceType": "proposal",
+      "date": "2026-05-16",
+      "system": "google_docs",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_sow_2026_05_20",
+      "path": "contracts/2026-05-20__sow.md",
+      "sourceType": "sow",
+      "date": "2026-05-20",
+      "system": "google_docs",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_slack_2026_05_16_internal_handoff",
+      "path": "slack/2026-05-16__internal-handoff.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-16",
+      "system": "slack",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_slack_2026_05_16_product_review_thread",
+      "path": "slack/2026-05-16__product-review-thread.jsonl",
+      "sourceType": "slack_thread",
+      "date": "2026-05-16",
+      "system": "slack",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_product_scope_2026_05_16",
+      "path": "product/product-scope.yml",
+      "sourceType": "product_scope",
+      "date": "2026-05-16",
+      "system": "notion",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_integration_support_matrix_2026_05_16",
+      "path": "product/integration-support-matrix.yml",
+      "sourceType": "integration_support_matrix",
+      "date": "2026-05-16",
+      "system": "notion",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_procurement_checklist_2026_05_17",
+      "path": "security_legal/2026-05-17__procurement-checklist.yml",
+      "sourceType": "procurement_checklist",
+      "date": "2026-05-17",
+      "system": "google_docs",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    },
+    {
+      "sourceId": "src_acme_robotics_onboarding_plan_2026_05_21",
+      "path": "onboarding/2026-05-21__implementation-plan.yml",
+      "sourceType": "onboarding_plan",
+      "date": "2026-05-21",
+      "system": "google_docs",
+      "accountId": "acct_acme_robotics",
+      "dealId": "deal_acme_robotics_ai_workflow_pilot",
+      "participants": [
+        "person_acme_robotics_alex_rivera",
+        "person_acme_robotics_jane_park"
+      ]
+    }
+  ],
+  "generationNotes": {
+    "includeSoftLanguage": true,
+    "includeFollowUpDrift": true,
+    "includeInternalCustomerFacingMismatch": true
+  }
+}

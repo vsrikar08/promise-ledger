@@ -1,0 +1,54 @@
+schemaVersion: '0.1'
+sourceId: src_helio_grid_energy_onboarding_plan_2026_05_25
+sourceType: onboarding_plan
+accountId: acct_helio_grid_energy
+dealId: deal_helio_grid_energy_regulated_pilot
+createdAt: '2026-05-25T09:00:00-07:00'
+visibility: customer_facing
+reliability: high
+milestones:
+- milestoneId: ms_helio_simulation_kickoff
+  title: Simulation workspace kickoff
+  ownerPersonId: person_helio_grid_energy_lina_ortiz
+  ownerSide: internal
+  dueDate: '2026-05-27'
+  status: not_started
+  dependencies:
+  - HelioGrid redacted event logs
+  sourceText: Simulation workspace kickoff is scheduled for 2026-05-27.
+- milestoneId: ms_helio_operator_queue
+  title: Operator approval queue
+  ownerPersonId: person_helio_grid_energy_lina_ortiz
+  ownerSide: internal
+  dueDate: '2026-05-29'
+  status: not_started
+  dependencies:
+  - Named operators from HelioGrid
+  sourceText: Configure operator approval queue for recommendations before the May 29 tabletop exercise.
+- milestoneId: ms_helio_dispatch_rules
+  title: Dispatch rules intake
+  ownerPersonId: person_helio_grid_energy_felix_nouri
+  ownerSide: customer
+  dueDate: '2026-05-22'
+  status: blocked
+  dependencies:
+  - Customer-provided redacted dispatch rules
+  sourceText: HelioGrid must provide redacted operating rules by 2026-05-22.
+- milestoneId: ms_helio_audit_export
+  title: Audit log export
+  ownerPersonId: person_helio_grid_energy_lina_ortiz
+  ownerSide: internal
+  dueDate: '2026-06-03'
+  status: not_started
+  dependencies:
+  - Operator approval queue configured
+  sourceText: Audit log export available by 2026-06-03.
+risks:
+- riskId: risk_helio_live_automation_language
+  title: Live dispatch wording could imply unsupported automation
+  severity: critical
+  reason: Product policy allows simulation and human-approved recommendations only during pilot.
+- riskId: risk_helio_customer_rules_dependency
+  title: Dispatch rules intake is customer-dependent
+  severity: medium
+  reason: Simulation setup cannot be finalized until HelioGrid provides redacted operating rules.

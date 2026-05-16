@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_ridgeway_university",
+  "commitments": [
+    {
+      "commitmentId": "com_ridgeway_university_sandbox_onboarding_next_week",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Begin sandbox onboarding next week and map the roster format before production import.",
+      "type": "soft_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_sierra_patton",
+      "promisedToPersonId": "person_ridgeway_university_hannah_brooks",
+      "ownerPersonId": "person_ridgeway_university_owen_rios",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-25",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "Supported by proposal and safe privacy boundary.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_email_2026_05_21_privacy_onboarding"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L008 00:03:55",
+          "quote": "We can begin sandbox onboarding next week and map the roster format before production import."
+        },
+        {
+          "sourceId": "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+          "locator": "email_privacy_onboarding_001",
+          "quote": "We can begin sandbox onboarding next week and move to production roster processing after DPA approval and sandbox validation are complete."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_ae_implied_prod_roster_next_week",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "AE implied onboarding could start next week with production roster data.",
+      "type": "unsupported_claim",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_sierra_patton",
+      "promisedToPersonId": "person_ridgeway_university_hannah_brooks",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-22",
+      "status": "needs_review",
+      "risk": "critical",
+      "riskReason": "DPA excerpt and privacy review prohibit production roster data processing before DPA approval and sandbox validation.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_dpa_excerpt_2026_05_28"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L005 00:02:08",
+          "quote": "We should be able to start onboarding next week with that roster."
+        },
+        {
+          "sourceId": "src_ridgeway_university_dpa_excerpt_2026_05_28",
+          "locator": "Vendor Obligations",
+          "quote": "Production student roster data processing cannot begin until DPA approval and sandbox validation are complete."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_dpa_before_prod_processing",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Production student roster data processing cannot begin until DPA approval and sandbox validation are complete.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_camille_yu",
+      "promisedToPersonId": "person_ridgeway_university_lena_ortega",
+      "ownerPersonId": "person_ridgeway_university_camille_yu",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-04",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "This legal boundary controls all production roster processing claims.",
+      "confidence": 0.98,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_dpa_excerpt_2026_05_28"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_dpa_excerpt_2026_05_28",
+          "locator": "Data Processing / Privacy Terms",
+          "quote": "Production student roster data processing cannot begin until DPA approval and sandbox validation are complete."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_customer_sandbox_roster_may_27",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Ridgeway will provide the sandbox roster by May 27.",
+      "type": "customer_commitment",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_ridgeway_university_hannah_brooks",
+      "promisedToPersonId": "person_ridgeway_university_sierra_patton",
+      "ownerPersonId": "person_ridgeway_university_hannah_brooks",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-27",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Sandbox onboarding is blocked until the customer provides the sandbox roster.",
+      "confidence": 0.94,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_email_2026_05_21_privacy_onboarding"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L013 00:06:47",
+          "quote": "Ridgeway can provide a sandbox roster by May 27 if you send the template."
+        },
+        {
+          "sourceId": "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+          "locator": "email_privacy_onboarding_002",
+          "quote": "Ridgeway will provide the sandbox roster by May 27."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_customer_ask_prod_roster_before_dpa",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Customer requested a written answer by May 22 on whether production roster processing is allowed before the DPA.",
+      "type": "customer_ask",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_hannah_brooks",
+      "promisedToPersonId": "person_ridgeway_university_sierra_patton",
+      "ownerPersonId": "person_ridgeway_university_camille_yu",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-22",
+      "status": "needs_review",
+      "risk": "high",
+      "riskReason": "The answer determines the privacy boundary for the onboarding plan.",
+      "confidence": 0.93,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_email_2026_05_21_privacy_onboarding"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L011 00:05:38",
+          "quote": "I need a written answer by May 22 on whether production roster processing is allowed before the DPA."
+        },
+        {
+          "sourceId": "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+          "locator": "email_privacy_onboarding_002",
+          "quote": "We still need a written answer by May 22 on production roster processing before DPA approval."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_sso_metadata_june_5",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Configure SSO metadata by June 5.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_sierra_patton",
+      "promisedToPersonId": "person_ridgeway_university_marcus_lee",
+      "ownerPersonId": "person_ridgeway_university_neil_avery",
+      "ownerSide": "internal",
+      "dueDate": "2026-06-05",
+      "status": "open",
+      "risk": "low",
+      "riskReason": "SSO can proceed without production roster data.",
+      "confidence": 0.92,
+      "linkedProductAreaId": "prod_identity",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_email_2026_05_21_privacy_onboarding"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L010 00:05:02",
+          "quote": "We will configure SSO metadata by June 5."
+        },
+        {
+          "sourceId": "src_ridgeway_university_email_2026_05_21_privacy_onboarding",
+          "locator": "email_privacy_onboarding_001",
+          "quote": "We will configure SSO metadata by June 5."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_security_questionnaire_may_29",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Return the security questionnaire response by May 29.",
+      "type": "explicit_promise",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_sierra_patton",
+      "promisedToPersonId": "person_ridgeway_university_lena_ortega",
+      "ownerPersonId": "person_ridgeway_university_camille_yu",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-29",
+      "status": "open",
+      "risk": "medium",
+      "riskReason": "Procurement depends on the security questionnaire and DPA approval packet.",
+      "confidence": 0.9,
+      "linkedProductAreaId": "prod_privacy_review",
+      "linkedSourceIds": [
+        "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "src_ridgeway_university_privacy_review_2026_05_23",
+        "src_ridgeway_university_onboarding_plan_2026_05_29"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+          "locator": "L015 00:07:52",
+          "quote": "We will return the security questionnaire by May 29."
+        },
+        {
+          "sourceId": "src_ridgeway_university_privacy_review_2026_05_23",
+          "locator": "Required Approvals",
+          "quote": "Security questionnaire response must be returned by 2026-05-29."
+        },
+        {
+          "sourceId": "src_ridgeway_university_onboarding_plan_2026_05_29",
+          "locator": "Vendor Responsibilities",
+          "quote": "PromiseLedger will return the security questionnaire response by 2026-05-29."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_missing_owner_prod_import_path",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Review the production roster import path, but no owner is currently assigned.",
+      "type": "internal_followup",
+      "direction": "internal_only",
+      "promisedByPersonId": "person_ridgeway_university_owen_rios",
+      "promisedToPersonId": "person_ridgeway_university_camille_yu",
+      "ownerPersonId": "unassigned",
+      "ownerSide": "unassigned",
+      "dueDate": "2026-05-25",
+      "status": "needs_review",
+      "risk": "high",
+      "riskReason": "Production import remains blocked and ownerless until Legal clears it.",
+      "confidence": 0.88,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_slack_2026_05_22_legal_security",
+        "src_ridgeway_university_slack_2026_05_22_cs_handoff"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_slack_2026_05_22_legal_security",
+          "locator": "slack_msg_ridgeway_university_legal_security_003",
+          "quote": "No one is currently assigned to review the production roster import path."
+        },
+        {
+          "sourceId": "src_ridgeway_university_slack_2026_05_22_cs_handoff",
+          "locator": "slack_msg_ridgeway_university_cs_handoff_003",
+          "quote": "I will own sandbox onboarding, but production import remains unassigned until Legal clears it."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_sandbox_only_privacy_boundary",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Only sandbox data may be used before DPA approval.",
+      "type": "contractual_obligation",
+      "direction": "we_owe_customer",
+      "promisedByPersonId": "person_ridgeway_university_camille_yu",
+      "promisedToPersonId": "person_ridgeway_university_lena_ortega",
+      "ownerPersonId": "person_ridgeway_university_camille_yu",
+      "ownerSide": "internal",
+      "dueDate": "2026-05-23",
+      "status": "open",
+      "risk": "high",
+      "riskReason": "This privacy boundary should block risky outbound drafts.",
+      "confidence": 0.96,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_privacy_review_2026_05_23"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_privacy_review_2026_05_23",
+          "locator": "Restricted Data Handling",
+          "quote": "Only sandbox data may be used before DPA approval."
+        }
+      ]
+    },
+    {
+      "commitmentId": "com_ridgeway_university_onboarding_plan_blocked_sandbox_roster",
+      "accountId": "acct_ridgeway_university",
+      "dealId": "deal_ridgeway_university_student_services_onboarding",
+      "normalizedText": "Sandbox roster import is blocked until Ridgeway provides the sandbox roster by 2026-05-27.",
+      "type": "expectation",
+      "direction": "customer_owes_us",
+      "promisedByPersonId": "person_ridgeway_university_owen_rios",
+      "promisedToPersonId": "person_ridgeway_university_hannah_brooks",
+      "ownerPersonId": "person_ridgeway_university_hannah_brooks",
+      "ownerSide": "customer",
+      "dueDate": "2026-05-27",
+      "status": "waiting_on_customer",
+      "risk": "medium",
+      "riskReason": "Onboarding timeline depends on customer-provided sandbox roster.",
+      "confidence": 0.89,
+      "linkedProductAreaId": "prod_student_roster",
+      "linkedSourceIds": [
+        "src_ridgeway_university_onboarding_plan_2026_05_29"
+      ],
+      "evidence": [
+        {
+          "sourceId": "src_ridgeway_university_onboarding_plan_2026_05_29",
+          "locator": "Milestones",
+          "quote": "Sandbox roster import is blocked until Ridgeway provides the sandbox roster by 2026-05-27."
+        }
+      ]
+    }
+  ]
+}

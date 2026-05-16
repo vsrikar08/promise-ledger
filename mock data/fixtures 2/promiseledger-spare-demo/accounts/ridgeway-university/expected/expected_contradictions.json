@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "accountId": "acct_ridgeway_university",
+  "contradictions": [
+    {
+      "contradictionId": "contra_ridgeway_university_prod_roster_before_dpa",
+      "accountId": "acct_ridgeway_university",
+      "severity": "critical",
+      "category": "privacy_mismatch",
+      "summary": "The call implied onboarding could start next week with production roster data, while the DPA says production student roster processing cannot begin until DPA approval and sandbox validation are complete.",
+      "claimA": {
+        "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "text": "We should be able to start onboarding next week with that roster.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_ridgeway_university_dpa_excerpt_2026_05_28",
+        "text": "Production student roster data processing cannot begin until DPA approval and sandbox validation are complete.",
+        "reliability": "authoritative"
+      },
+      "recommendedResolution": "Use sandbox-only wording and block any production-roster processing claims before DPA approval and sandbox validation."
+    },
+    {
+      "contradictionId": "contra_ridgeway_university_call_vs_proposal_sandbox_scope",
+      "accountId": "acct_ridgeway_university",
+      "severity": "high",
+      "category": "privacy_mismatch",
+      "summary": "The call statement could be read as starting with production data, while the proposal says onboarding may begin with sandbox data only.",
+      "claimA": {
+        "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "text": "We should be able to start onboarding next week with that roster.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_ridgeway_university_proposal_2026_05_22",
+        "text": "Onboarding may begin with sandbox data only.",
+        "reliability": "high"
+      },
+      "recommendedResolution": "Clarify that next week's onboarding means sandbox onboarding, not production roster processing."
+    },
+    {
+      "contradictionId": "contra_ridgeway_university_roster_dependency",
+      "accountId": "acct_ridgeway_university",
+      "severity": "medium",
+      "category": "timeline_mismatch",
+      "summary": "The safe call language says sandbox onboarding can begin next week, but the onboarding plan says sandbox roster import is blocked until Ridgeway provides the sandbox roster by May 27.",
+      "claimA": {
+        "sourceId": "src_ridgeway_university_call_2026_05_21_onboarding_discovery",
+        "text": "We can begin sandbox onboarding next week and map the roster format before production import.",
+        "reliability": "medium"
+      },
+      "claimB": {
+        "sourceId": "src_ridgeway_university_onboarding_plan_2026_05_29",
+        "text": "Sandbox roster import is blocked until Ridgeway provides the sandbox roster by 2026-05-27.",
+        "reliability": "high"
+      },
+      "recommendedResolution": "Track sandbox onboarding as dependent on the customer's sandbox roster delivery."
+    }
+  ]
+}
