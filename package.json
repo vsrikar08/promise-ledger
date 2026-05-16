@@ -7,6 +7,7 @@
     "dev": "node src/server.js",
     "start": "node src/server.js",
     "import:gbrain": "node scripts/import-gbrain.js",
+    "doctor": "node scripts/doctor.js",
     "eval": "node scripts/eval.js",
     "test": "node --test"
   },

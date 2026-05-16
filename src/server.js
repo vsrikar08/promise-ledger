@@ -4,12 +4,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { IMPORT_MANIFEST_PATH, REPO_ROOT } from './config.js';
 import { getAccount, listAccounts, readImportManifest } from './corpus.js';
-import { buildLedgerFromGbrain } from './extractor.js';
+import { buildAccountMemoryFromGbrain, buildLedgerFromGbrain } from './extractor.js';
 import { importAllToGbrain, tryDoctor } from './gbrain.js';
-import { createGithubIssues, getGithubStatus } from './github.js';
+import { createGithubIssuePlanner, createGithubIssues, getGithubStatus } from './github.js';
 
 const PORT = Number(process.env.PORT || 3210);
 const PUBLIC_DIR = path.join(REPO_ROOT, 'public');
+const issuePlanner = createGithubIssuePlanner();
 
 const server = http.createServer(async (request, response) => {
   try {
@@ -20,7 +21,7 @@ const server = http.createServer(async (request, response) => {
     }
     await routeStatic(request, response, url.pathname);
   } catch (error) {
-    writeJson(response, 500, { error: error instanceof Error ? error.message : String(error) });
+    writeError(response, error);
   }
 });
 
@@ -91,14 +92,44 @@ async function routeApi(request, response, url) {
     return;
   }
 
+  const memoryMatch = url.pathname.match(/^\/api\/accounts\/([^/]+)\/memory$/);
+  if (request.method === 'GET' && memoryMatch) {
+    const accountSlug = decodeURIComponent(memoryMatch[1]);
+    if (!getAccount(accountSlug)) {
+      writeJson(response, 404, { error: `Unknown account ${accountSlug}`, code: 'UNKNOWN_ACCOUNT' });
+      return;
+    }
+    const manifest = readImportManifest(IMPORT_MANIFEST_PATH);
+    const memory = buildAccountMemoryFromGbrain(accountSlug, manifest);
+    writeJson(response, 200, memory);
+    return;
+  }
+
+  const issuePreviewMatch = url.pathname.match(/^\/api\/accounts\/([^/]+)\/issues\/preview$/);
+  if (request.method === 'POST' && issuePreviewMatch) {
+    const accountSlug = decodeURIComponent(issuePreviewMatch[1]);
+    const body = await readRequestJson(request);
+    const manifest = readImportManifest(IMPORT_MANIFEST_PATH);
+    const ledger = buildLedgerFromGbrain(accountSlug, manifest);
+    const obligations = selectObligations(ledger, body.issueIds);
+    writeJson(response, 200, issuePlanner.preview(obligations));
+    return;
+  }
+
+  const issueCreateMatch = url.pathname.match(/^\/api\/accounts\/([^/]+)\/issues\/create$/);
+  if (request.method === 'POST' && issueCreateMatch) {
+    const body = await readRequestJson(request);
+    writeJson(response, 200, issuePlanner.create({ nonce: body.nonce }));
+    return;
+  }
+
   const issueMatch = url.pathname.match(/^\/api\/accounts\/([^/]+)\/issues$/);
   if (request.method === 'POST' && issueMatch) {
     const accountSlug = decodeURIComponent(issueMatch[1]);
     const body = await readRequestJson(request);
     const manifest = readImportManifest(IMPORT_MANIFEST_PATH);
     const ledger = buildLedgerFromGbrain(accountSlug, manifest);
-    const selected = new Set(body.issueIds || ledger.obligations.map((item) => item.id));
-    const obligations = ledger.obligations.filter((item) => selected.has(item.id));
+    const obligations = selectObligations(ledger, body.issueIds);
     const results = createGithubIssues(obligations, { dryRun: Boolean(body.dryRun) });
     writeJson(response, 200, { results });
     return;
@@ -129,6 +160,19 @@ async function routeStatic(request, response, pathname) {
 function writeJson(response, statusCode, payload) {
   response.writeHead(statusCode, { 'Content-Type': 'application/json' });
   response.end(JSON.stringify(payload, null, 2));
+}
+
+function writeError(response, error) {
+  const statusCode = error?.statusCode || 500;
+  writeJson(response, statusCode, {
+    error: error instanceof Error ? error.message : String(error),
+    code: error?.code || 'INTERNAL_ERROR',
+  });
+}
+
+function selectObligations(ledger, issueIds) {
+  const selected = new Set(issueIds || ledger.obligations.map((item) => item.id));
+  return ledger.obligations.filter((item) => selected.has(item.id));
 }
 
 function readRequestJson(request) {

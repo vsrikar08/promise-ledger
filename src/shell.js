@@ -6,17 +6,22 @@ export function runCommand(command, args, options = {}) {
     input: options.input,
     encoding: 'utf8',
     maxBuffer: options.maxBuffer ?? 20 * 1024 * 1024,
+    timeout: options.timeout ?? 30_000,
     env: { ...process.env, ...(options.env || {}) },
   });
 
   if (result.error) {
-    throw new Error(`${command} ${args.join(' ')} failed: ${result.error.message}`);
+    throw commandError(
+      result.error.code === 'ETIMEDOUT' ? 'COMMAND_TIMEOUT' : 'COMMAND_FAILED',
+      `${command} ${args.join(' ')} ${result.error.code === 'ETIMEDOUT' ? 'timed out' : 'failed'}: ${result.error.message}`,
+    );
   }
 
   if (result.status !== 0) {
     const stderr = result.stderr?.trim();
     const stdout = result.stdout?.trim();
-    throw new Error(
+    throw commandError(
+      'COMMAND_EXIT_NONZERO',
       `${command} ${args.join(' ')} exited ${result.status}${stderr ? `\n${stderr}` : ''}${stdout ? `\n${stdout}` : ''}`,
     );
   }
@@ -31,6 +36,16 @@ export function tryCommand(command, args, options = {}) {
   try {
     return { ok: true, ...runCommand(command, args, options) };
   } catch (error) {
-    return { ok: false, error: error instanceof Error ? error.message : String(error) };
+    return {
+      ok: false,
+      code: error?.code || 'COMMAND_FAILED',
+      error: error instanceof Error ? error.message : String(error),
+    };
   }
+}
+
+function commandError(code, message) {
+  const error = new Error(message);
+  error.code = code;
+  return error;
 }

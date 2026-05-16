@@ -84,6 +84,44 @@ export function buildLedgerFromGbrain(accountSlug, importManifest) {
   return buildLedgerFromPages(account, pages, importManifest.importedAt);
 }
 
+export function buildAccountMemoryFromGbrain(accountSlug, importManifest) {
+  const account = getAccount(accountSlug);
+  if (!account) throw new Error(`Unknown account: ${accountSlug}`);
+  if (!importManifest) throw new Error('GBrain import manifest not found. Run npm run import:gbrain first.');
+
+  const imported = importManifest.imported.filter((item) => item.accountSlug === accountSlug && ['evidence', 'draft'].includes(item.corpusRole));
+  if (imported.filter((item) => item.corpusRole === 'evidence').length === 0) {
+    throw new Error(`No imported GBrain pages found for ${accountSlug}. Run npm run import:gbrain.`);
+  }
+
+  const pages = imported.map((item) => {
+    const page = getGbrainPage(item.slug);
+    return {
+      ...item,
+      gbrainPage: page,
+      raw: extractRawFromGbrainPage(page),
+    };
+  });
+
+  return buildAccountMemoryFromPages(account, pages, importManifest.importedAt);
+}
+
+export function buildAccountMemoryFromPages(account, pages, importedAt = null) {
+  const ledger = buildLedgerFromPages(account, pages, importedAt);
+  return {
+    schemaVersion: '0.1',
+    generatedAt: ledger.generatedAt,
+    importedAt,
+    account: ledger.account,
+    salesOwner: ledger.salesOwner,
+    summary: ledger.summary,
+    ledger,
+    timeline: buildSourceTimeline(pages, ledger),
+    presetAnswers: buildPresetAnswers(ledger),
+    guardResults: buildGuardResults(pages, ledger),
+  };
+}
+
 export function buildLedgerFromPages(account, pages, importedAt = null) {
   const evidencePages = pages.filter((page) => page.corpusRole === 'evidence');
   const oraclePages = pages.filter((page) => page.corpusRole === 'oracle');
@@ -382,11 +420,20 @@ function buildObligations({ account, salesOwner, promiseCandidates, blockers }) 
       acceptanceCriteria,
       githubTitle: title,
       githubBody: body,
-      githubLabels: ['enhancement'],
+      githubLabels: buildGithubLabels(risk, term.key, flags),
     });
   }
 
   return obligations.sort((a, b) => riskRank(a.risk) - riskRank(b.risk) || a.title.localeCompare(b.title));
+}
+
+function buildGithubLabels(risk, termKey, flags) {
+  return [
+    'promise-debt',
+    `risk:${risk}`,
+    `term:${termKey}`,
+    ...flags.map((flag) => `flag:${flag}`),
+  ];
 }
 
 function isPromiseCandidate(item) {
@@ -590,7 +637,7 @@ function buildDeveloperAction(termKey, account) {
   const map = {
     netsuite: `Decide the approved ${account.accountName} pilot integration path, document whether NetSuite is out of scope, and give Sales safe customer-facing wording.`,
     dashboard: `Assign an engineering/product owner and produce the dashboard preview plan promised to the customer, or renegotiate the date with Sales.`,
-    'external-email': `Enforce preview-only outbound email behavior for the pilot and document the approval path for any live send request.`,
+    'external-email': `Enforce preview-only external email behavior for the pilot and document the approval path for any live send request.`,
     security: `Package the security deliverable and confirm the customer-facing send date is still accurate.`,
     baa: `Coordinate Legal/Product approval for the BAA language before Sales or CS repeats any onboarding date.`,
     onboarding: `Reconcile the customer-facing kickoff date with legal/procurement prerequisites and publish the earliest valid start condition.`,
@@ -649,6 +696,184 @@ function renderGithubIssueBody(input) {
   }).join('\n') || '- None found.';
 
   return `## Promise Debt\n\n${input.summary}\n\n## Customer / Deal\n\n- Customer: ${input.account.accountName}\n- Deal: ${input.account.scenarioType}\n- Sales owner: ${input.salesOwner?.name || 'Unknown'}${input.salesOwner?.email ? ` <${input.salesOwner.email}>` : ''}\n- Risk: ${input.risk.toUpperCase()}\n- Flags: ${input.flags.length ? input.flags.join(', ') : 'none'}\n${input.dueDate ? `- Customer-visible date: ${input.dueDate}\n` : ''}\n## Developer Task\n\n${input.developerAction}\n\n## Source-backed Promise Evidence\n\n${evidenceList(input.sourceEvidence)}\n\n## Conflicting / Limiting Evidence\n\n${evidenceList(input.conflictingEvidence)}\n\n## Acceptance Criteria\n\n${input.acceptanceCriteria.map((item) => `- [ ] ${item}`).join('\n')}\n\n## Provenance\n\n- PromiseLedger-Commitment-ID: ${input.id}\n- Generated from GBrain-imported source artifacts, not from a manually entered issue.\n- Term: ${input.term.label}\n`;
+}
+
+function buildSourceTimeline(pages, ledger) {
+  const relatedBySource = new Map();
+  for (const obligation of ledger.obligations) {
+    for (const item of obligation.sourceEvidence) {
+      appendSourceRelation(relatedBySource, item.sourceId, obligation, 'support');
+    }
+    for (const item of obligation.conflictingEvidence) {
+      appendSourceRelation(relatedBySource, item.sourceId, obligation, 'conflict');
+    }
+  }
+
+  return pages
+    .filter((page) => page.corpusRole === 'evidence')
+    .filter((page) => page.sourceId)
+    .map((page) => {
+      const related = dedupeObjects(relatedBySource.get(page.sourceId) || [], (item) => `${item.term}:${item.kind}`);
+      return {
+        sourceId: page.sourceId,
+        sourceSlug: page.slug,
+        sourceType: page.sourceType,
+        date: page.date || 'Date unknown',
+        relativeToAccount: page.relativeToAccount,
+        title: page.relativeToAccount || page.sourceId,
+        eventKind: related.some((item) => item.kind === 'conflict') ? 'conflict' : related.length ? 'support' : 'context',
+        terms: related.map((item) => item.termLabel),
+        risks: [...new Set(related.map((item) => item.risk))],
+        summary: buildTimelineSummary(page, related),
+      };
+    })
+    .sort(compareTimelineDate);
+}
+
+function appendSourceRelation(map, sourceId, obligation, kind) {
+  const list = map.get(sourceId) || [];
+  list.push({
+    term: obligation.term,
+    termLabel: obligation.termLabel,
+    risk: obligation.risk,
+    kind,
+  });
+  map.set(sourceId, list);
+}
+
+function buildTimelineSummary(page, related) {
+  if (!related.length) return `${humanizeSourceType(page.sourceType)} context for the account review.`;
+  const terms = [...new Set(related.map((item) => item.termLabel))].join(', ');
+  if (related.some((item) => item.kind === 'conflict')) {
+    return `${humanizeSourceType(page.sourceType)} limits or contradicts: ${terms}.`;
+  }
+  return `${humanizeSourceType(page.sourceType)} supports: ${terms}.`;
+}
+
+function buildPresetAnswers(ledger) {
+  const bullets = ledger.obligations
+    .filter((obligation) => ['critical', 'high'].includes(obligation.risk))
+    .slice(0, 5)
+    .map((obligation) => ({
+      issueId: obligation.id,
+      text: `${obligation.developerAction} Risk: ${obligation.risk}. Date: ${obligation.dueDate || 'Not found in sources'}.`,
+      owner: obligation.salesOwner?.name || 'Not found in sources',
+      date: obligation.dueDate || null,
+      risk: obligation.risk,
+      citations: [...obligation.sourceEvidence, ...obligation.conflictingEvidence].slice(0, 3).map((item) => ({
+        sourceId: item.sourceId,
+        locator: item.locator,
+        quote: item.quote,
+      })),
+    }));
+
+  return [{
+    id: 'what-do-we-owe-before-kickoff',
+    question: 'What do we owe Acme before kickoff?',
+    status: bullets.length ? 'answered' : 'empty',
+    bullets,
+  }];
+}
+
+function buildGuardResults(pages, ledger) {
+  return pages
+    .filter((page) => page.corpusRole === 'draft')
+    .map((page) => {
+      const draft = safeJsonParse(page.raw);
+      if (!draft) {
+        return {
+          draftId: page.sourceId,
+          subject: page.relativeToAccount,
+          decision: 'error',
+          risk: 'unknown',
+          blockedClaims: [],
+          error: 'Draft JSON could not be parsed.',
+        };
+      }
+
+      const claims = Array.isArray(draft.intendedClaims) ? draft.intendedClaims : inferDraftClaims(draft.bodyMarkdown);
+      const blockedClaims = claims
+        .filter((claim) => claim.shouldBeAllowed === false || (claim.shouldBeAllowed !== true && claimLooksBlocked(claim.text, ledger)))
+        .map((claim) => buildBlockedClaim(claim, ledger));
+
+      return {
+        draftId: draft.draftId || page.sourceId,
+        subject: draft.subject || page.relativeToAccount,
+        channel: draft.channel || '',
+        audience: draft.audience || '',
+        decision: blockedClaims.length ? 'block' : 'allow',
+        risk: blockedClaims.length ? strongestRisk(blockedClaims.map((claim) => claim.risk)) : 'low',
+        blockedClaims,
+      };
+    })
+    .sort((a, b) => a.draftId.localeCompare(b.draftId));
+}
+
+function inferDraftClaims(bodyMarkdown = '') {
+  return String(bodyMarkdown)
+    .split(/(?<=[.!?])\s+/)
+    .map((text, index) => ({ claimId: `claim_${index + 1}`, text: text.trim(), shouldBeAllowed: true }))
+    .filter((claim) => claim.text);
+}
+
+function claimLooksBlocked(text, ledger) {
+  const terms = detectTerms(text);
+  return terms.length > 0 && ledger.obligations.some((obligation) => terms.some((term) => term.key === obligation.term));
+}
+
+function buildBlockedClaim(claim, ledger) {
+  const terms = detectTerms(claim.text);
+  const obligation = ledger.obligations.find((item) => terms.some((term) => term.key === item.term)) || ledger.obligations[0];
+  const conflicts = obligation ? obligation.conflictingEvidence : [];
+  return {
+    claimId: claim.claimId,
+    text: claim.text,
+    risk: obligation?.risk || 'high',
+    reason: obligation?.riskReason || 'Claim conflicts with source-backed account memory.',
+    conflictingSourceIds: conflicts.map((item) => item.sourceId),
+    citations: conflicts.map((item) => ({
+      sourceId: item.sourceId,
+      locator: item.locator,
+      quote: item.quote,
+    })),
+    safeAlternative: buildSafeAlternative(obligation),
+  };
+}
+
+function buildSafeAlternative(obligation) {
+  if (!obligation) return 'Use source-backed wording before sending this draft.';
+  if (obligation.term === 'netsuite') return 'We will confirm the NetSuite integration scope with Product before adding it to the pilot plan.';
+  if (obligation.term === 'dashboard') return 'We will share a renewal dashboard preview plan after reviewing the field map.';
+  if (obligation.term === 'external-email') return 'We can support preview-only email workflows during the pilot.';
+  return 'Use the issue guidance and citations before repeating this claim.';
+}
+
+function compareTimelineDate(a, b) {
+  const aUnknown = a.date === 'Date unknown';
+  const bUnknown = b.date === 'Date unknown';
+  if (aUnknown && !bUnknown) return 1;
+  if (!aUnknown && bUnknown) return -1;
+  return String(a.date).localeCompare(String(b.date)) || a.sourceId.localeCompare(b.sourceId);
+}
+
+function humanizeSourceType(value) {
+  return String(value || 'source').replaceAll('_', ' ');
+}
+
+function strongestRisk(risks) {
+  return [...risks].sort((a, b) => riskRank(a) - riskRank(b))[0] || 'low';
+}
+
+function dedupeObjects(items, keyForItem) {
+  const seen = new Set();
+  const output = [];
+  for (const item of items) {
+    const key = keyForItem(item);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    output.push(item);
+  }
+  return output;
 }
 
 function summarizeRisk(termKey, blockers) {

@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PromiseLedger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -44,9 +47,17 @@
 
         <section class="toolbar">
           <button class="secondary-action" id="loadLedgerButton" type="button">Extract from GBrain</button>
-          <button class="danger-action" id="createIssuesButton" type="button" disabled>Create selected GitHub issues</button>
           <button class="secondary-action" id="dryRunButton" type="button" disabled>Preview issue create</button>
+          <button class="danger-action" id="createIssuesButton" type="button" disabled>Create selected GitHub issues</button>
           <span class="toolbar-message" id="toolbarMessage"></span>
+        </section>
+
+        <section class="issue-safety-strip empty" id="issueSafetyStrip">
+          <div><strong>Target repo</strong><span>Preview issue creation to freeze a plan.</span></div>
+          <div><strong>0 selected</strong><span>No issue plan yet</span></div>
+          <div><strong>Dry run required</strong><span>Real create disabled</span></div>
+          <div><strong>Duplicates unchecked</strong><span>Waiting for preview</span></div>
+          <div><strong>No token</strong><span>Frozen plan missing</span></div>
         </section>
 
         <section class="content-grid">
@@ -63,8 +74,24 @@
               <h3>Evidence and PRD body</h3>
               <span id="detailRisk">No selection</span>
             </div>
-            <div class="detail-content" id="detailContent">
-              <p class="empty-state">Select an extracted promise-debt item to inspect the exact GitHub issue body and source evidence.</p>
+            <div class="detail-layout">
+              <div class="detail-content" id="detailContent">
+                <p class="empty-state">Select an extracted promise-debt item to inspect the exact GitHub issue body and source evidence.</p>
+              </div>
+              <aside class="memory-rail" aria-label="Account memory rail">
+                <section class="memory-panel" id="guardPanel">
+                  <div class="memory-panel-title">Promise Guard</div>
+                  <p class="empty-state">Extract account memory to evaluate outbound drafts.</p>
+                </section>
+                <section class="memory-panel" id="answerPanel">
+                  <div class="memory-panel-title">Account Q&A</div>
+                  <p class="empty-state">What do we owe Acme before kickoff?</p>
+                </section>
+                <section class="memory-panel" id="timelinePanel">
+                  <div class="memory-panel-title">Source timeline</div>
+                  <p class="empty-state">Timeline appears after extraction.</p>
+                </section>
+              </aside>
             </div>
           </div>
         </section>
