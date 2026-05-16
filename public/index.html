@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PromiseLedger</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">PL</div>
+          <div>
+            <h1>PromiseLedger</h1>
+            <p>Sales promise debt to engineering intake</p>
+          </div>
+        </div>
+
+        <div class="system-status" id="systemStatus">
+          <span class="dot pending"></span>
+          <span>Checking system</span>
+        </div>
+
+        <button class="primary-action" id="importButton" type="button">Import all mock data into GBrain</button>
+
+        <div class="section-label">Accounts</div>
+        <nav class="account-list" id="accountList"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="workspace-header">
+          <div>
+            <div class="eyebrow">GitHub issue planner</div>
+            <h2 id="accountTitle">Select an account</h2>
+            <p id="accountMeta">Import the sales-system corpus, then extract promise debt from GBrain.</p>
+          </div>
+          <div class="score-strip" id="scoreStrip">
+            <div><strong>0</strong><span>issues</span></div>
+            <div><strong>0</strong><span>critical</span></div>
+            <div><strong>0</strong><span>sources</span></div>
+          </div>
+        </header>
+
+        <section class="toolbar">
+          <button class="secondary-action" id="loadLedgerButton" type="button">Extract from GBrain</button>
+          <button class="danger-action" id="createIssuesButton" type="button" disabled>Create selected GitHub issues</button>
+          <button class="secondary-action" id="dryRunButton" type="button" disabled>Preview issue create</button>
+          <span class="toolbar-message" id="toolbarMessage"></span>
+        </section>
+
+        <section class="content-grid">
+          <div class="issue-pane">
+            <div class="pane-header">
+              <h3>Developer issue queue</h3>
+              <span id="issueCount">No extracted issues</span>
+            </div>
+            <div class="issue-list" id="issueList"></div>
+          </div>
+
+          <div class="detail-pane">
+            <div class="pane-header">
+              <h3>Evidence and PRD body</h3>
+              <span id="detailRisk">No selection</span>
+            </div>
+            <div class="detail-content" id="detailContent">
+              <p class="empty-state">Select an extracted promise-debt item to inspect the exact GitHub issue body and source evidence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="activity-log" id="activityLog" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "promise-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "import:gbrain": "node scripts/import-gbrain.js",
+    "eval": "node scripts/eval.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
