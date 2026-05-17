@@ -9,6 +9,12 @@ The current repository contains fictional fixture datasets for hackathon/demo fl
 - `mock data/fixtures/promiseledger-demo/` - primary fictional demo dataset.
 - `mock data/fixtures 2/promiseledger-spare-demo/` - spare fictional demo dataset with additional account packets.
 
+## Documentation
+
+- [CHANGELOG.md](CHANGELOG.md) - release history.
+- [DESIGN.md](DESIGN.md) - design system and UI rules.
+- [CLAUDE.md](CLAUDE.md) - agent working notes.
+
 ## Demo Flow
 
 1. Ingest messy account artifacts from CRM, calls, email, Slack, proposals, contracts, and onboarding documents.
