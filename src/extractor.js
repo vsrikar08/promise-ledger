@@ -122,6 +122,42 @@ export function buildAccountMemoryFromPages(account, pages, importedAt = null) {
   };
 }
 
+export function enrichAccountMemoryWithGithubIssues(memory, issueLookup) {
+  const lookup = issueLookup || unavailableGithubLookup('GITHUB_LOOKUP_NOT_RUN', 'GitHub issue lookup was not run.');
+  const obligations = memory.ledger.obligations.map((obligation) => ({
+    ...obligation,
+    githubIssueState: githubIssueStateForObligation(obligation, lookup),
+  }));
+  const obligationsById = new Map(obligations.map((obligation) => [obligation.id, obligation]));
+  const enrichedSummary = {
+    ...memory.summary,
+    linkedGithubIssueCount: obligations.filter((obligation) => obligation.githubIssueState.status !== 'no_issue' && obligation.githubIssueState.status !== 'unavailable').length,
+    githubIssueLookupStatus: lookup.status,
+  };
+
+  return {
+    ...memory,
+    summary: enrichedSummary,
+    githubIssueLookup: {
+      status: lookup.status,
+      repo: lookup.repo || '',
+      errorCode: lookup.errorCode || null,
+      error: lookup.error || null,
+      issueCount: lookup.issueCount || 0,
+      duplicateCommitmentIds: lookup.duplicateCommitmentIds || [],
+    },
+    ledger: {
+      ...memory.ledger,
+      summary: enrichedSummary,
+      obligations,
+    },
+    guardResults: memory.guardResults.map((result) => ({
+      ...result,
+      blockedClaims: result.blockedClaims.map((claim) => enrichBlockedClaimWithGithubIssue(claim, obligationsById, lookup)),
+    })),
+  };
+}
+
 export function buildLedgerFromPages(account, pages, importedAt = null) {
   const evidencePages = pages.filter((page) => page.corpusRole === 'evidence');
   const oraclePages = pages.filter((page) => page.corpusRole === 'oracle');
@@ -695,7 +731,7 @@ function renderGithubIssueBody(input) {
     return `- \`${item.sourceId}\` ${item.locator}${speaker}: "${item.quote}"`;
   }).join('\n') || '- None found.';
 
-  return `## Promise Debt\n\n${input.summary}\n\n## Customer / Deal\n\n- Customer: ${input.account.accountName}\n- Deal: ${input.account.scenarioType}\n- Sales owner: ${input.salesOwner?.name || 'Unknown'}${input.salesOwner?.email ? ` <${input.salesOwner.email}>` : ''}\n- Risk: ${input.risk.toUpperCase()}\n- Flags: ${input.flags.length ? input.flags.join(', ') : 'none'}\n${input.dueDate ? `- Customer-visible date: ${input.dueDate}\n` : ''}\n## Developer Task\n\n${input.developerAction}\n\n## Source-backed Promise Evidence\n\n${evidenceList(input.sourceEvidence)}\n\n## Conflicting / Limiting Evidence\n\n${evidenceList(input.conflictingEvidence)}\n\n## Acceptance Criteria\n\n${input.acceptanceCriteria.map((item) => `- [ ] ${item}`).join('\n')}\n\n## Provenance\n\n- PromiseLedger-Commitment-ID: ${input.id}\n- Generated from GBrain-imported source artifacts, not from a manually entered issue.\n- Term: ${input.term.label}\n`;
+  return `## Promise Debt\n\n${input.summary}\n\n## Customer / Deal\n\n- Customer: ${input.account.accountName}\n- Deal: ${input.account.scenarioType}\n- Sales owner: ${input.salesOwner?.name || 'Unknown'}${input.salesOwner?.email ? ` <${input.salesOwner.email}>` : ''}\n- Risk: ${input.risk.toUpperCase()}\n- Flags: ${input.flags.length ? input.flags.join(', ') : 'none'}\n${input.dueDate ? `- Customer-visible date: ${input.dueDate}\n` : ''}\n## Developer Task\n\n${input.developerAction}\n\n## Source-backed Promise Evidence\n\n${evidenceList(input.sourceEvidence)}\n\n## Conflicting / Limiting Evidence\n\n${evidenceList(input.conflictingEvidence)}\n\n## Acceptance Criteria\n\n${input.acceptanceCriteria.map((item) => `- [ ] ${item}`).join('\n')}\n\n## Sales Guidance\n\nDecision: pending\n\nWhen Engineering resolves this for Sales, replace the decision with \`approved_with_wording\` and add \`Customer-safe wording: ...\`, or use \`not_supported\` if Sales must not promise it.\n\n## Provenance\n\n- PromiseLedger-Commitment-ID: ${input.id}\n- Generated from GBrain-imported source artifacts, not from a manually entered issue.\n- Term: ${input.term.label}\n`;
 }
 
 function buildSourceTimeline(pages, ledger) {
@@ -823,11 +859,16 @@ function claimLooksBlocked(text, ledger) {
 
 function buildBlockedClaim(claim, ledger) {
   const terms = detectTerms(claim.text);
-  const obligation = ledger.obligations.find((item) => terms.some((term) => term.key === item.term)) || ledger.obligations[0];
+  const obligation = ledger.obligations.find((item) => terms.some((term) => term.key === item.term));
   const conflicts = obligation ? obligation.conflictingEvidence : [];
   return {
     claimId: claim.claimId,
     text: claim.text,
+    obligationId: obligation?.id || null,
+    obligationTitle: obligation?.title || '',
+    term: obligation?.term || '',
+    termLabel: obligation?.termLabel || '',
+    matchStatus: obligation ? 'matched' : 'unmatched',
     risk: obligation?.risk || 'high',
     reason: obligation?.riskReason || 'Claim conflicts with source-backed account memory.',
     conflictingSourceIds: conflicts.map((item) => item.sourceId),
@@ -837,6 +878,89 @@ function buildBlockedClaim(claim, ledger) {
       quote: item.quote,
     })),
     safeAlternative: buildSafeAlternative(obligation),
+    githubIssueState: null,
+  };
+}
+
+function enrichBlockedClaimWithGithubIssue(claim, obligationsById, lookup) {
+  const obligation = obligationsById.get(claim.obligationId);
+  const githubIssueState = obligation
+    ? obligation.githubIssueState
+    : githubIssueStateForMissingObligation(lookup);
+  return {
+    ...claim,
+    githubIssueState,
+    safeAlternative: githubIssueState.salesGuidance || claim.safeAlternative,
+  };
+}
+
+function githubIssueStateForObligation(obligation, lookup) {
+  if (lookup.status === 'unavailable') {
+    return {
+      commitmentId: obligation.id,
+      status: 'unavailable',
+      engineeringStatus: 'GitHub status unavailable',
+      decision: 'unknown',
+      salesGuidance: '',
+      blocksOriginalClaim: true,
+      duplicateCount: 0,
+      errorCode: lookup.errorCode || 'GITHUB_LOOKUP_UNAVAILABLE',
+      error: lookup.error || 'GitHub issue lookup unavailable.',
+      issue: null,
+    };
+  }
+
+  const issue = lookup.issuesByCommitmentId?.[obligation.id];
+  if (issue) return issue;
+
+  return {
+    commitmentId: obligation.id,
+    status: 'no_issue',
+    engineeringStatus: 'No linked engineering issue',
+    decision: 'none',
+    salesGuidance: '',
+    blocksOriginalClaim: true,
+    duplicateCount: 0,
+    issue: null,
+  };
+}
+
+function githubIssueStateForMissingObligation(lookup) {
+  if (lookup.status === 'unavailable') {
+    return {
+      commitmentId: null,
+      status: 'unavailable',
+      engineeringStatus: 'GitHub status unavailable',
+      decision: 'unknown',
+      salesGuidance: '',
+      blocksOriginalClaim: true,
+      duplicateCount: 0,
+      errorCode: lookup.errorCode || 'GITHUB_LOOKUP_UNAVAILABLE',
+      error: lookup.error || 'GitHub issue lookup unavailable.',
+      issue: null,
+    };
+  }
+
+  return {
+    commitmentId: null,
+    status: 'unmatched',
+    engineeringStatus: 'No matching promise-debt issue',
+    decision: 'none',
+    salesGuidance: '',
+    blocksOriginalClaim: true,
+    duplicateCount: 0,
+    issue: null,
+  };
+}
+
+function unavailableGithubLookup(errorCode, error) {
+  return {
+    status: 'unavailable',
+    errorCode,
+    error,
+    issueCount: 0,
+    duplicateCommitmentIds: [],
+    issuesByCommitmentId: {},
   };
 }
 

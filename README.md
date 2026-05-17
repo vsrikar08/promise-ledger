@@ -9,6 +9,12 @@ The current repository contains fictional fixture datasets for hackathon/demo fl
 - `mock data/fixtures/promiseledger-demo/` - primary fictional demo dataset.
 - `mock data/fixtures 2/promiseledger-spare-demo/` - spare fictional demo dataset with additional account packets.
 
+## Documentation
+
+- [CHANGELOG.md](CHANGELOG.md) - release history.
+- [DESIGN.md](DESIGN.md) - design system and UI rules.
+- [CLAUDE.md](CLAUDE.md) - agent working notes.
+
 ## Demo Flow
 
 1. Ingest messy account artifacts from CRM, calls, email, Slack, proposals, contracts, and onboarding documents.
@@ -23,7 +29,7 @@ All companies, people, domains, products, contracts, claims, and facts in the fi
 
 ## Hackathon App
 
-PromiseLedger now includes a small dependency-free Node app that imports the mock sales-system corpus into GBrain, extracts promise debt from the imported pages, and creates real GitHub Issues for developer follow-up.
+PromiseLedger now includes a small dependency-free Node app that imports the mock sales-system corpus into GBrain, extracts promise debt from the imported pages, and creates real GitHub Issues for developer follow-up. Promise Guard also reads linked GitHub issues back into the account memory rail so Sales can see engineering status before repeating an unsupported claim.
 
 ### Prerequisites
 
@@ -58,7 +64,9 @@ The demo flow is:
 2. Select Acme Robotics.
 3. Extract promise debt from GBrain.
 4. Review source-backed developer issues.
-5. Create selected GitHub Issues.
+5. Review Promise Guard results for risky and safe outbound drafts.
+6. Check linked GitHub engineering status and customer-safe wording on blocked claims.
+7. Preview or create selected GitHub Issues.
 
 ### Useful Commands
 

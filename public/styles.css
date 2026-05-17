@@ -480,6 +480,32 @@ button:disabled {
   line-height: 1.4;
 }
 
+.blocked-claim {
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.engineering-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.engineering-status .status-chip {
+  line-height: 1.25;
+  text-transform: none;
+  white-space: normal;
+}
+
+.engineering-status a {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .status-chip {
   display: inline-flex;
   align-items: center;

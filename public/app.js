@@ -229,13 +229,50 @@ function renderGuardPanel() {
         <span class="status-chip ${result.decision === 'block' ? 'blocked' : 'safe'}">${result.decision === 'block' ? 'Blocked' : 'Safe'}</span>
         <strong>${escapeHtml(result.subject)}</strong>
         <p>${result.blockedClaims.length ? `${result.blockedClaims.length} unsupported claim(s) found.` : 'No unsupported claims found.'}</p>
-        ${result.blockedClaims.slice(0, 2).map((claim) => `
-          <p>${escapeHtml(claim.text)}</p>
-          <div class="citation-row">${claim.conflictingSourceIds.slice(0, 3).map((sourceId) => `<span class="citation">${escapeHtml(sourceId)}</span>`).join('')}</div>
-        `).join('')}
+        ${result.blockedClaims.map(renderBlockedClaim).join('')}
       </div>
     `).join('')}
   `;
+}
+
+function renderBlockedClaim(claim) {
+  return `
+    <div class="blocked-claim">
+      <p>${escapeHtml(claim.text)}</p>
+      ${renderGithubIssueState(claim.githubIssueState)}
+      <p><strong>Safe wording:</strong> ${escapeHtml(claim.safeAlternative || 'Use source-backed wording before sending this draft.')}</p>
+      <div class="citation-row">${(claim.conflictingSourceIds || []).slice(0, 3).map((sourceId) => `<span class="citation">${escapeHtml(sourceId)}</span>`).join('')}</div>
+    </div>
+  `;
+}
+
+function renderGithubIssueState(issueState) {
+  if (!issueState) return '';
+  const issue = issueState.issue;
+  const issueLink = issue?.url
+    ? `<a href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">#${escapeHtml(issue.number)} ${escapeHtml(issue.title || 'GitHub issue')}</a>`
+    : '';
+  const duplicateCopy = issueState.duplicateCount > 1
+    ? `<span class="citation">${issueState.duplicateCount} duplicate issues</span>`
+    : '';
+  const errorCopy = issueState.status === 'unavailable' && issueState.errorCode
+    ? `<span class="citation">${escapeHtml(issueState.errorCode)}</span>`
+    : '';
+
+  return `
+    <div class="engineering-status">
+      <span class="status-chip ${githubIssueStatusClass(issueState.status)}">${escapeHtml(issueState.engineeringStatus || 'GitHub status unknown')}</span>
+      ${issueLink}
+      ${duplicateCopy}
+      ${errorCopy}
+    </div>
+  `;
+}
+
+function githubIssueStatusClass(status) {
+  if (status === 'closed_approved_with_wording') return 'safe';
+  if (status === 'closed_not_supported') return 'critical';
+  return 'warn';
 }
 
 function renderAnswerPanel() {

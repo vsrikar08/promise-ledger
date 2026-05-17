@@ -4,9 +4,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { IMPORT_MANIFEST_PATH, REPO_ROOT } from './config.js';
 import { getAccount, listAccounts, readImportManifest } from './corpus.js';
-import { buildAccountMemoryFromGbrain, buildLedgerFromGbrain } from './extractor.js';
+import { buildAccountMemoryFromGbrain, buildLedgerFromGbrain, enrichAccountMemoryWithGithubIssues } from './extractor.js';
 import { importAllToGbrain, tryDoctor } from './gbrain.js';
-import { createGithubIssuePlanner, createGithubIssues, getGithubStatus } from './github.js';
+import { createGithubIssuePlanner, createGithubIssues, getGithubStatus, getPromiseDebtIssueLookup } from './github.js';
 
 const PORT = Number(process.env.PORT || 3210);
 const PUBLIC_DIR = path.join(REPO_ROOT, 'public');
@@ -100,7 +100,10 @@ async function routeApi(request, response, url) {
       return;
     }
     const manifest = readImportManifest(IMPORT_MANIFEST_PATH);
-    const memory = buildAccountMemoryFromGbrain(accountSlug, manifest);
+    const memory = enrichAccountMemoryWithGithubIssues(
+      buildAccountMemoryFromGbrain(accountSlug, manifest),
+      getPromiseDebtIssueLookup(),
+    );
     writeJson(response, 200, memory);
     return;
   }
